@@ -3,38 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Suma</title>
+    <title>Calculadora BQ25504 - Configuración de Resistencias</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Calculadora de Suma</h1>
-            <p>Ingresa dos números para sumarlos</p>
+            <h1>🔋 Calculadora BQ25504</h1>
+            <p>Configuración de resistencias para el chip BQ25504</p>
         </header>
         
         <main>
-            <div class="calculator">
-                <div class="input-group">
-                    <label for="numero1">Primer número:</label>
-                    <input type="number" id="numero1" placeholder="Ingresa el primer número">
+            <div class="calculator-grid">
+                <!-- VBAT_OV Section -->
+                <div class="calc-section">
+                    <h2>⚡ Voltaje Máximo de Batería (VBAT_OV)</h2>
+                    <p class="section-info">ROV1 + ROV2 = 10 MΩ | Rango: 2.2V - 5.2V</p>
+                    
+                    <div class="input-group">
+                        <label for="vbat_ov">Voltaje deseado (V):</label>
+                        <input type="number" id="vbat_ov" step="0.1" min="2.2" max="5.2" placeholder="3.7">
+                    </div>
+                    
+                    <div class="result-group">
+                        <div class="result-item">
+                            <label>ROV1:</label>
+                            <span id="rov1_result">-</span>
+                        </div>
+                        <div class="result-item">
+                            <label>ROV2:</label>
+                            <span id="rov2_result">-</span>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="input-group">
-                    <label for="numero2">Segundo número:</label>
-                    <input type="number" id="numero2" placeholder="Ingresa el segundo número">
+
+                <!-- VBAT_UV Section -->
+                <div class="calc-section">
+                    <h2>🔋 Voltaje Mínimo de Batería (VBAT_UV)</h2>
+                    <p class="section-info">RUV1 + RUV2 = 10 MΩ | Mínimo: 2.2V</p>
+                    
+                    <div class="input-group">
+                        <label for="vbat_uv">Voltaje deseado (V):</label>
+                        <input type="number" id="vbat_uv" step="0.1" min="2.2" max="5.2" placeholder="2.5">
+                    </div>
+                    
+                    <div class="result-group">
+                        <div class="result-item">
+                            <label>RUV1:</label>
+                            <span id="ruv1_result">-</span>
+                        </div>
+                        <div class="result-item">
+                            <label>RUV2:</label>
+                            <span id="ruv2_result">-</span>
+                        </div>
+                    </div>
                 </div>
-                
-                <button id="calcular" onclick="calcularSuma()">Calcular Suma</button>
-                
-                <div class="resultado" id="resultado">
-                    <span>El resultado aparecerá aquí</span>
+
+                <!-- Battery OK Threshold Section -->
+                <div class="calc-section">
+                    <h2>✅ Umbral de Batería OK</h2>
+                    <p class="section-info">ROK1 + ROK2 + ROK3 = 10 MΩ</p>
+                    
+                    <div class="input-group">
+                        <label for="vbat_ok_prog">VBAT_OK_PROG (V):</label>
+                        <input type="number" id="vbat_ok_prog" step="0.1" min="2.2" max="5.2" placeholder="3.0">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="vbat_ok_hyst">VBAT_OK_HYST (V):</label>
+                        <input type="number" id="vbat_ok_hyst" step="0.1" min="0.1" max="1.0" placeholder="0.2">
+                    </div>
+                    
+                    <div class="result-group">
+                        <div class="result-item">
+                            <label>ROK1:</label>
+                            <span id="rok1_result">-</span>
+                        </div>
+                        <div class="result-item">
+                            <label>ROK2:</label>
+                            <span id="rok2_result">-</span>
+                        </div>
+                        <div class="result-item">
+                            <label>ROK3:</label>
+                            <span id="rok3_result">-</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MPPT Sampling Network Section -->
+                <div class="calc-section">
+                    <h2>☀️ Red de Muestreo MPPT</h2>
+                    <p class="section-info">ROC1 + ROC2 = 20 MΩ</p>
+                    
+                    <div class="input-group">
+                        <label for="mpp_threshold">Umbral MPP (% de VIN_DC):</label>
+                        <input type="number" id="mpp_threshold" step="1" min="50" max="100" placeholder="80">
+                    </div>
+                    
+                    <div class="result-group">
+                        <div class="result-item">
+                            <label>ROC1:</label>
+                            <span id="roc1_result">-</span>
+                        </div>
+                        <div class="result-item">
+                            <label>ROC2:</label>
+                            <span id="roc2_result">-</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
         
         <footer>
-            <p>Haz clic en "Calcular Suma" para ver el resultado</p>
+            <p>💡 Ingresa los valores deseados para calcular las resistencias necesarias</p>
         </footer>
     </div>
     

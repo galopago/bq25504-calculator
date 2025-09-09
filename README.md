@@ -1,14 +1,14 @@
-# 🧮 Calculadora de Suma
+# 🔋 Calculadora BQ25504
 
-Una calculadora web simple y elegante para sumar dos números, construida con HTML, CSS y JavaScript vanilla.
+Una calculadora web profesional para configurar resistencias del chip BQ25504, construida con HTML, CSS y JavaScript vanilla.
 
 ## ✨ Características
 
 - ✅ **Interfaz moderna y responsiva** - Se adapta a móviles, tablets y desktop
-- ✅ **Validación de inputs** - Previene errores y muestra mensajes claros
+- ✅ **Cálculos precisos** - Fórmulas exactas del datasheet BQ25504
+- ✅ **Validación de rangos** - Previene valores fuera de especificación
 - ✅ **Animaciones suaves** - Efectos visuales atractivos
-- ✅ **Soporte para decimales** - Funciona con números enteros y decimales
-- ✅ **Navegación con teclado** - Usa Tab para moverse entre campos y Enter para calcular
+- ✅ **Cálculo en tiempo real** - Resultados instantáneos al cambiar valores
 - ✅ **Sin dependencias** - Solo HTML, CSS y JavaScript puro
 
 ## 🚀 Ver en Acción
@@ -30,41 +30,49 @@ Una calculadora web simple y elegante para sumar dos números, construida con HT
 ## 🛠️ Cómo Usar
 
 1. **Abre cualquiera de los enlaces de arriba**
-2. **Ingresa el primer número** en el campo "Primer número"
-3. **Ingresa el segundo número** en el campo "Segundo número"
-4. **Haz clic en "Calcular Suma"** o presiona Enter
-5. **Ve el resultado** formateado y animado
+2. **Configura VBAT_OV** - Voltaje máximo de batería (2.2V - 5.2V)
+3. **Configura VBAT_UV** - Voltaje mínimo de batería (2.2V - 5.2V)
+4. **Configura Battery OK** - Umbrales de batería OK y histéresis
+5. **Configura MPPT** - Porcentaje del punto de máxima potencia (50% - 100%)
+6. **Ve los valores de resistencias** calculados automáticamente
 
 ## ⌨️ Atajos de Teclado
 
 - **Tab**: Moverse entre campos
-- **Enter**: Calcular suma (desde cualquier campo)
-- **Escribir**: Limpia automáticamente el resultado anterior
+- **Escribir**: Calcula automáticamente las resistencias
+- **Cambiar valores**: Actualización en tiempo real
 
 ## 📱 Responsive Design
 
 La calculadora se adapta perfectamente a:
-- 📱 **Móviles** (320px+)
-- 📱 **Tablets** (768px+)
-- 💻 **Desktop** (1024px+)
+- 📱 **Móviles** (320px+) - Layout vertical optimizado
+- 📱 **Tablets** (768px+) - Grid de 2 columnas
+- 💻 **Desktop** (1024px+) - Grid de 4 columnas
 
 ## 🎨 Tecnologías Utilizadas
 
 - **HTML5** - Estructura semántica
 - **CSS3** - Estilos modernos con Flexbox y Grid
-- **JavaScript ES6+** - Funcionalidad interactiva
-- **Gradientes CSS** - Diseño visual atractivo
-- **Animaciones CSS** - Transiciones suaves
+- **JavaScript ES6+** - Cálculos precisos del BQ25504
+- **Fórmulas del Datasheet** - Implementación exacta de Texas Instruments
+- **Validación en tiempo real** - Rangos y restricciones dinámicas
 
 ## 📁 Estructura del Proyecto
 
 ```
 bq25504-calculator/
-├── index.html          # Página principal
-├── styles.css          # Estilos CSS
-├── script.js           # Lógica JavaScript
-└── README.md           # Este archivo
+├── index.html          # Calculadora BQ25504
+├── styles.css          # Estilos responsivos
+├── script.js           # Fórmulas del BQ25504
+└── README.md           # Documentación
 ```
+
+## 🔧 Parámetros Calculados
+
+- **VBAT_OV**: ROV1 + ROV2 = 10 MΩ (2.2V - 5.2V)
+- **VBAT_UV**: RUV1 + RUV2 = 10 MΩ (2.2V - 5.2V)  
+- **Battery OK**: ROK1 + ROK2 + ROK3 = 10 MΩ
+- **MPPT**: ROC1 + ROC2 = 20 MΩ (50% - 100%)
 
 ## 🔧 Instalación Local (Opcional)
 

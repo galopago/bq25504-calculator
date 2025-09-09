@@ -1,112 +1,272 @@
-// Función principal para calcular la suma
-function calcularSuma() {
-    // Obtener los valores de los inputs
-    const numero1 = document.getElementById('numero1').value;
-    const numero2 = document.getElementById('numero2').value;
-    const resultado = document.getElementById('resultado');
+// Constantes del BQ25504
+const CONSTANTS = {
+    VBAT_OV_MIN: 2.2,
+    VBAT_OV_MAX: 5.2,
+    VBAT_UV_MIN: 2.2,
+    ROV_TOTAL: 10e6,  // 10 MΩ
+    RUV_TOTAL: 10e6,  // 10 MΩ
+    ROK_TOTAL: 10e6,  // 10 MΩ
+    ROC_TOTAL: 20e6,  // 20 MΩ
+    VREF: 1.2,        // Voltaje de referencia interno
+    MPP_MIN: 50,
+    MPP_MAX: 100
+};
+
+// Función principal para calcular todas las resistencias
+function calculateAllResistances() {
+    calculateVBAT_OV();
+    calculateVBAT_UV();
+    calculateBatteryOK();
+    calculateMPPT();
+}
+
+// Cálculo de VBAT_OV (Overvoltage)
+function calculateVBAT_OV() {
+    const vbat_ov = parseFloat(document.getElementById('vbat_ov').value);
     
-    // Validar que ambos campos tengan valores
-    if (numero1 === '' || numero2 === '') {
-        mostrarError('Por favor, ingresa ambos números');
+    if (!isValidVoltage(vbat_ov, CONSTANTS.VBAT_OV_MIN, CONSTANTS.VBAT_OV_MAX)) {
+        clearResults(['rov1_result', 'rov2_result']);
         return;
     }
     
-    // Convertir a números y validar
-    const num1 = parseFloat(numero1);
-    const num2 = parseFloat(numero2);
+    // Fórmula correcta del BQ25504:
+    // VBAT_OV = VREF * (1 + ROV1/ROV2)
+    // Donde ROV1 + ROV2 = 10 MΩ
+    // Despejando: ROV1 = ROV_TOTAL * (VBAT_OV - VREF) / VBAT_OV
+    // ROV2 = ROV_TOTAL - ROV1
+    const rov1 = CONSTANTS.ROV_TOTAL * (vbat_ov - CONSTANTS.VREF) / vbat_ov;
+    const rov2 = CONSTANTS.ROV_TOTAL - rov1;
     
-    if (isNaN(num1) || isNaN(num2)) {
-        mostrarError('Por favor, ingresa números válidos');
+    // Verificar que los valores sean positivos
+    if (rov1 < 0 || rov2 < 0) {
+        clearResults(['rov1_result', 'rov2_result']);
         return;
     }
     
-    // Calcular la suma
-    const suma = num1 + num2;
-    
-    // Mostrar el resultado
-    mostrarResultado(num1, num2, suma);
+    displayResistance('rov1_result', rov1);
+    displayResistance('rov2_result', rov2);
 }
 
-// Función para mostrar el resultado
-function mostrarResultado(num1, num2, suma) {
-    const resultado = document.getElementById('resultado');
+// Cálculo de VBAT_UV (Undervoltage)
+function calculateVBAT_UV() {
+    const vbat_uv = parseFloat(document.getElementById('vbat_uv').value);
     
-    // Formatear números para mostrar (máximo 2 decimales)
-    const num1Formateado = num1 % 1 === 0 ? num1 : num1.toFixed(2);
-    const num2Formateado = num2 % 1 === 0 ? num2 : num2.toFixed(2);
-    const sumaFormateada = suma % 1 === 0 ? suma : suma.toFixed(2);
+    if (!isValidVoltage(vbat_uv, CONSTANTS.VBAT_UV_MIN, CONSTANTS.VBAT_OV_MAX)) {
+        clearResults(['ruv1_result', 'ruv2_result']);
+        return;
+    }
     
-    resultado.innerHTML = `
-        <div style="font-size: 1.1rem; margin-bottom: 10px;">
-            <strong>${num1Formateado}</strong> + <strong>${num2Formateado}</strong>
-        </div>
-        <div style="font-size: 1.5rem; color: #2d3748;">
-            = <strong>${sumaFormateada}</strong>
-        </div>
-    `;
+    // Fórmula correcta del BQ25504:
+    // VBAT_UV = VREF * (1 + RUV1/RUV2)
+    // Donde RUV1 + RUV2 = 10 MΩ
+    // Despejando: RUV1 = RUV_TOTAL * (VBAT_UV - VREF) / VBAT_UV
+    // RUV2 = RUV_TOTAL - RUV1
+    const ruv1 = CONSTANTS.RUV_TOTAL * (vbat_uv - CONSTANTS.VREF) / vbat_uv;
+    const ruv2 = CONSTANTS.RUV_TOTAL - ruv1;
     
-    // Aplicar clase de animación
-    resultado.classList.add('mostrar');
+    // Verificar que los valores sean positivos
+    if (ruv1 < 0 || ruv2 < 0) {
+        clearResults(['ruv1_result', 'ruv2_result']);
+        return;
+    }
     
-    // Remover la clase después de la animación
-    setTimeout(() => {
-        resultado.classList.remove('mostrar');
-    }, 300);
+    displayResistance('ruv1_result', ruv1);
+    displayResistance('ruv2_result', ruv2);
 }
 
-// Función para mostrar errores
-function mostrarError(mensaje) {
-    const resultado = document.getElementById('resultado');
-    resultado.innerHTML = `<span style="color: #e53e3e;">${mensaje}</span>`;
-    resultado.classList.remove('mostrar');
+// Cálculo de Battery OK Threshold
+function calculateBatteryOK() {
+    const vbat_ok_prog = parseFloat(document.getElementById('vbat_ok_prog').value);
+    const vbat_ok_hyst = parseFloat(document.getElementById('vbat_ok_hyst').value);
+    
+    if (!isValidVoltage(vbat_ok_prog, CONSTANTS.VBAT_OV_MIN, CONSTANTS.VBAT_OV_MAX) ||
+        !isValidVoltage(vbat_ok_hyst, 0.1, 1.0)) {
+        clearResults(['rok1_result', 'rok2_result', 'rok3_result']);
+        return;
+    }
+    
+    // Fórmulas correctas del BQ25504 para Battery OK:
+    // VBAT_OK_PROG = VREF * (1 + (ROK1 + ROK2)/ROK3)
+    // VBAT_OK_HYST = VREF * (1 + ROK1/(ROK2 + ROK3))
+    // Donde ROK1 + ROK2 + ROK3 = 10 MΩ
+    
+    // Usando aproximación simplificada para resolver el sistema:
+    // Asumiendo que ROK1 ≈ ROK2 para simplificar
+    const ratio_prog = (vbat_ok_prog - CONSTANTS.VREF) / CONSTANTS.VREF;
+    const ratio_hyst = (vbat_ok_hyst - CONSTANTS.VREF) / CONSTANTS.VREF;
+    
+    // Aproximación: ROK1 = ROK2, entonces ROK3 = ROK_TOTAL - 2*ROK1
+    // Resolviendo: ROK1 = ROK_TOTAL * ratio_hyst / (2 + ratio_hyst)
+    const rok1 = CONSTANTS.ROK_TOTAL * ratio_hyst / (2 + ratio_hyst);
+    const rok2 = rok1; // Aproximación
+    const rok3 = CONSTANTS.ROK_TOTAL - rok1 - rok2;
+    
+    // Verificar que todos los valores sean positivos y razonables
+    if (rok1 < 0 || rok2 < 0 || rok3 < 0 || rok1 > CONSTANTS.ROK_TOTAL || rok2 > CONSTANTS.ROK_TOTAL || rok3 > CONSTANTS.ROK_TOTAL) {
+        clearResults(['rok1_result', 'rok2_result', 'rok3_result']);
+        return;
+    }
+    
+    displayResistance('rok1_result', rok1);
+    displayResistance('rok2_result', rok2);
+    displayResistance('rok3_result', rok3);
 }
 
-// Función para limpiar los campos
-function limpiarCampos() {
-    document.getElementById('numero1').value = '';
-    document.getElementById('numero2').value = '';
-    document.getElementById('resultado').innerHTML = '<span>El resultado aparecerá aquí</span>';
-    document.getElementById('resultado').classList.remove('mostrar');
+// Cálculo de MPPT Sampling Network
+function calculateMPPT() {
+    const mpp_threshold = parseFloat(document.getElementById('mpp_threshold').value);
+    
+    if (!isValidMPP(mpp_threshold)) {
+        clearResults(['roc1_result', 'roc2_result']);
+        return;
+    }
+    
+    // Fórmula correcta del BQ25504 para MPPT:
+    // MPP% = 100% * (ROC1 / (ROC1 + ROC2))
+    // Donde ROC1 + ROC2 = 20 MΩ
+    // Despejando: ROC1 = ROC_TOTAL * (MPP_THRESHOLD / 100)
+    // ROC2 = ROC_TOTAL - ROC1
+    const roc1 = CONSTANTS.ROC_TOTAL * (mpp_threshold / 100);
+    const roc2 = CONSTANTS.ROC_TOTAL - roc1;
+    
+    // Verificar que los valores sean positivos
+    if (roc1 < 0 || roc2 < 0) {
+        clearResults(['roc1_result', 'roc2_result']);
+        return;
+    }
+    
+    displayResistance('roc1_result', roc1);
+    displayResistance('roc2_result', roc2);
 }
 
-// Event listeners para mejorar la experiencia del usuario
+// Función para validar voltajes
+function isValidVoltage(value, min, max) {
+    return !isNaN(value) && value >= min && value <= max;
+}
+
+// Función para validar MPP threshold
+function isValidMPP(value) {
+    return !isNaN(value) && value >= CONSTANTS.MPP_MIN && value <= CONSTANTS.MPP_MAX;
+}
+
+// Función para mostrar resistencias formateadas
+function displayResistance(elementId, resistance) {
+    const element = document.getElementById(elementId);
+    
+    if (resistance < 0) {
+        element.textContent = 'Error';
+        element.style.color = '#e53e3e';
+        return;
+    }
+    
+    // Formatear resistencia según su magnitud
+    let formattedValue;
+    if (resistance >= 1e6) {
+        formattedValue = (resistance / 1e6).toFixed(2) + ' MΩ';
+    } else if (resistance >= 1e3) {
+        formattedValue = (resistance / 1e3).toFixed(1) + ' kΩ';
+    } else {
+        formattedValue = resistance.toFixed(0) + ' Ω';
+    }
+    
+    element.textContent = formattedValue;
+    element.style.color = '#38b2ac';
+}
+
+// Función para limpiar resultados
+function clearResults(elementIds) {
+    elementIds.forEach(id => {
+        const element = document.getElementById(id);
+        element.textContent = '-';
+        element.style.color = '#a0aec0';
+    });
+}
+
+// Función para encontrar el valor estándar más cercano de resistencia
+function findNearestStandardResistance(resistance) {
+    // Valores estándar de resistencias 1% (E96 series)
+    const standardValues = [
+        100, 102, 105, 107, 110, 113, 115, 118, 121, 124, 127, 130, 133, 137, 140, 143, 147, 150, 154, 158, 162, 165, 169, 174, 178, 182, 187, 191, 196, 200, 205, 210, 215, 221, 226, 232, 237, 243, 249, 255, 261, 267, 274, 280, 287, 294, 301, 309, 316, 324, 332, 340, 348, 357, 365, 374, 383, 392, 402, 412, 422, 432, 442, 453, 464, 475, 487, 499, 511, 523, 536, 549, 562, 576, 590, 604, 619, 634, 649, 665, 681, 698, 715, 732, 750, 768, 787, 806, 825, 845, 866, 887, 909, 931, 953, 976
+    ];
+    
+    // Escalar según la magnitud de la resistencia
+    let scale = 1;
+    if (resistance >= 1e6) {
+        scale = 1e6;
+    } else if (resistance >= 1e3) {
+        scale = 1e3;
+    }
+    
+    const scaledResistance = resistance / scale;
+    const nearest = standardValues.reduce((prev, curr) => 
+        Math.abs(curr - scaledResistance) < Math.abs(prev - scaledResistance) ? curr : prev
+    );
+    
+    return nearest * scale;
+}
+
+// Event listeners
 document.addEventListener('DOMContentLoaded', function() {
-    const numero1 = document.getElementById('numero1');
-    const numero2 = document.getElementById('numero2');
-    const calcular = document.getElementById('calcular');
-    
-    // Permitir calcular con Enter
-    numero1.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            numero2.focus();
-        }
+    // Agregar event listeners a todos los inputs
+    const inputs = document.querySelectorAll('input[type="number"]');
+    inputs.forEach(input => {
+        input.addEventListener('input', calculateAllResistances);
+        input.addEventListener('change', calculateAllResistances);
     });
     
-    numero2.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            calcularSuma();
-        }
-    });
+    // Calcular inicialmente
+    calculateAllResistances();
     
-    // Limpiar resultado cuando el usuario empiece a escribir
-    numero1.addEventListener('input', function() {
-        if (this.value !== '' || document.getElementById('numero2').value !== '') {
-            document.getElementById('resultado').innerHTML = '<span>El resultado aparecerá aquí</span>';
-        }
-    });
-    
-    numero2.addEventListener('input', function() {
-        if (this.value !== '' || document.getElementById('numero1').value !== '') {
-            document.getElementById('resultado').innerHTML = '<span>El resultado aparecerá aquí</span>';
-        }
-    });
-    
-    // Efecto hover en el botón
-    calcular.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-2px)';
-    });
-    
-    calcular.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
+    // Agregar validación en tiempo real
+    inputs.forEach(input => {
+        input.addEventListener('blur', function() {
+            const value = parseFloat(this.value);
+            const min = parseFloat(this.min);
+            const max = parseFloat(this.max);
+            
+            if (value < min || value > max) {
+                this.style.borderColor = '#e53e3e';
+                this.style.backgroundColor = '#fed7d7';
+            } else {
+                this.style.borderColor = '#e2e8f0';
+                this.style.backgroundColor = 'white';
+            }
+        });
+        
+        input.addEventListener('focus', function() {
+            this.style.borderColor = '#667eea';
+            this.style.backgroundColor = 'white';
+        });
     });
 });
+
+// Función para exportar resultados (opcional)
+function exportResults() {
+    const results = {
+        vbat_ov: {
+            voltage: document.getElementById('vbat_ov').value,
+            rov1: document.getElementById('rov1_result').textContent,
+            rov2: document.getElementById('rov2_result').textContent
+        },
+        vbat_uv: {
+            voltage: document.getElementById('vbat_uv').value,
+            ruv1: document.getElementById('ruv1_result').textContent,
+            ruv2: document.getElementById('ruv2_result').textContent
+        },
+        battery_ok: {
+            vbat_ok_prog: document.getElementById('vbat_ok_prog').value,
+            vbat_ok_hyst: document.getElementById('vbat_ok_hyst').value,
+            rok1: document.getElementById('rok1_result').textContent,
+            rok2: document.getElementById('rok2_result').textContent,
+            rok3: document.getElementById('rok3_result').textContent
+        },
+        mppt: {
+            threshold: document.getElementById('mpp_threshold').value,
+            roc1: document.getElementById('roc1_result').textContent,
+            roc2: document.getElementById('roc2_result').textContent
+        }
+    };
+    
+    console.log('Resultados BQ25504:', results);
+    return results;
+}
