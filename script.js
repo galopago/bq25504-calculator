@@ -1,13 +1,13 @@
 // Constantes del BQ25504
 const CONSTANTS = {
-    VBAT_OV_MIN: 2.2,
-    VBAT_OV_MAX: 5.2,
-    VBAT_UV_MIN: 2.2,
+    VBAT_OV_MIN: 2.5,
+    VBAT_OV_MAX: 5.25,
+    VBAT_UV_MIN: 2.5,
     ROV_TOTAL: 10e6,  // 10 MΩ
     RUV_TOTAL: 10e6,  // 10 MΩ
     ROK_TOTAL: 10e6,  // 10 MΩ
     ROC_TOTAL: 20e6,  // 20 MΩ
-    VREF: 1.2,        // Voltaje de referencia interno
+    VREF: 1.25,       // Voltaje de referencia interno
     MPP_MIN: 50,
     MPP_MAX: 100
 };
@@ -29,12 +29,12 @@ function calculateVBAT_OV() {
         return;
     }
     
-    // Fórmula correcta del BQ25504:
-    // VBAT_OV = VREF * (1 + ROV1/ROV2)
+    // Fórmula correcta del BQ25504 según equations.txt:
+    // VBAT_OV = VREF * (1 + ROV2/ROV1)
     // Donde ROV1 + ROV2 = 10 MΩ
-    // Despejando: ROV1 = ROV_TOTAL * (VBAT_OV - VREF) / VBAT_OV
+    // Despejando: ROV1 = ROV_TOTAL * VREF / VBAT_OV
     // ROV2 = ROV_TOTAL - ROV1
-    const rov1 = CONSTANTS.ROV_TOTAL * (vbat_ov - CONSTANTS.VREF) / vbat_ov;
+    const rov1 = CONSTANTS.ROV_TOTAL * CONSTANTS.VREF / vbat_ov;
     const rov2 = CONSTANTS.ROV_TOTAL - rov1;
     
     // Verificar que los valores sean positivos
@@ -56,12 +56,12 @@ function calculateVBAT_UV() {
         return;
     }
     
-    // Fórmula correcta del BQ25504:
-    // VBAT_UV = VREF * (1 + RUV1/RUV2)
+    // Fórmula correcta del BQ25504 según equations.txt:
+    // VBAT_UV = VREF * (1 + RUV2/RUV1)
     // Donde RUV1 + RUV2 = 10 MΩ
-    // Despejando: RUV1 = RUV_TOTAL * (VBAT_UV - VREF) / VBAT_UV
+    // Despejando: RUV1 = RUV_TOTAL * VREF / VBAT_UV
     // RUV2 = RUV_TOTAL - RUV1
-    const ruv1 = CONSTANTS.RUV_TOTAL * (vbat_uv - CONSTANTS.VREF) / vbat_uv;
+    const ruv1 = CONSTANTS.RUV_TOTAL * CONSTANTS.VREF / vbat_uv;
     const ruv2 = CONSTANTS.RUV_TOTAL - ruv1;
     
     // Verificar que los valores sean positivos
@@ -80,25 +80,27 @@ function calculateBatteryOK() {
     const vbat_ok_hyst = parseFloat(document.getElementById('vbat_ok_hyst').value);
     
     if (!isValidVoltage(vbat_ok_prog, CONSTANTS.VBAT_OV_MIN, CONSTANTS.VBAT_OV_MAX) ||
-        !isValidVoltage(vbat_ok_hyst, 0.1, 1.0)) {
+        !isValidVoltage(vbat_ok_hyst, vbat_ok_prog + 0.1, CONSTANTS.VBAT_OV_MAX)) {
         clearResults(['rok1_result', 'rok2_result', 'rok3_result']);
         return;
     }
     
-    // Fórmulas correctas del BQ25504 para Battery OK:
-    // VBAT_OK_PROG = VREF * (1 + (ROK1 + ROK2)/ROK3)
-    // VBAT_OK_HYST = VREF * (1 + ROK1/(ROK2 + ROK3))
+    // Fórmulas correctas del BQ25504 según equations.txt:
+    // VBAT_OK_PROG = VREF * (1 + ROK2/ROK1)
+    // VBAT_OK_HYST = VREF * (1 + (ROK2+ROK3)/ROK1)
     // Donde ROK1 + ROK2 + ROK3 = 10 MΩ
     
-    // Usando aproximación simplificada para resolver el sistema:
-    // Asumiendo que ROK1 ≈ ROK2 para simplificar
+    // Resolviendo el sistema de ecuaciones:
+    // De VBAT_OK_PROG: ROK2 = ROK1 * (VBAT_OK_PROG/VREF - 1)
+    // De VBAT_OK_HYST: ROK2 + ROK3 = ROK1 * (VBAT_OK_HYST/VREF - 1)
+    // De la restricción: ROK3 = 10M - ROK1 - ROK2
+    
     const ratio_prog = (vbat_ok_prog - CONSTANTS.VREF) / CONSTANTS.VREF;
     const ratio_hyst = (vbat_ok_hyst - CONSTANTS.VREF) / CONSTANTS.VREF;
     
-    // Aproximación: ROK1 = ROK2, entonces ROK3 = ROK_TOTAL - 2*ROK1
-    // Resolviendo: ROK1 = ROK_TOTAL * ratio_hyst / (2 + ratio_hyst)
-    const rok1 = CONSTANTS.ROK_TOTAL * ratio_hyst / (2 + ratio_hyst);
-    const rok2 = rok1; // Aproximación
+    // ROK1 = 10M / (1 + ratio_prog + ratio_hyst)
+    const rok1 = CONSTANTS.ROK_TOTAL / (1 + ratio_prog + ratio_hyst);
+    const rok2 = rok1 * ratio_prog;
     const rok3 = CONSTANTS.ROK_TOTAL - rok1 - rok2;
     
     // Verificar que todos los valores sean positivos y razonables

@@ -1,0 +1,21 @@
+// VBAT undervoltage threshold
+VBAT_UV = (1.25) * (1+(RUV2/RUV1))
+    10M = RUV2 + RUV1
+
+// VBAT overvoltage threshold
+VBAT_OV = (3/2)*(1.25)*(1+(ROV2/ROV1))
+    10M = ROV2 + ROV1
+    
+// VBAT_OK threshold
+// VBAT_OK hysteresis threshold
+VBAT_OK_PROG = (1.25) * (1+(ROK2/ROK1))     
+VBAT_OK_HYST = (1.25) * (1+((ROK2/ROK3)/ROK1))     
+10M = ROK1 + ROK2 + ROK3
+
+// MPPT ratio
+MPPT = ROC1 / (ROC1+ROC2)
+20M = ROC1 + ROC2
+
+// Restrictions
+VBAT_UV < VBAT_OK_PROG < VBAT_OK_HYST < VBAT_OV
+VBAT Battery voltage range 2.5 - 5.25 V
