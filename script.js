@@ -86,14 +86,14 @@ function calculateBatteryOK() {
     }
     
     // Correct BQ25504 formulas according to Excel:
-    // ROK1 = VREF / VBAT_OK_PROG * RSUM
-    // ROK2 = (VBAT_OK_HYST / VREF - 1) * ROK1
+    // ROK1 = RSUM * VREF / VBAT_OK_HYST
+    // ROK2 = ROK1 * (VBAT_OK_PROG/VREF - 1)
     // ROK3 = RSUM - ROK1 - ROK2
     // VBAT_OK = VREF * (1 + ROK2/ROK1)
     // VBAT_OK_HYST = VREF * ((ROK1+ROK2+ROK3)/ROK1)
     
-    const rok1 = CONSTANTS.VREF / vbat_ok_prog * CONSTANTS.ROK_TOTAL;
-    const rok2 = (vbat_ok_hyst / CONSTANTS.VREF - 1) * rok1;
+    const rok1 = CONSTANTS.ROK_TOTAL * CONSTANTS.VREF / vbat_ok_hyst;
+    const rok2 = rok1 * (vbat_ok_prog / CONSTANTS.VREF - 1);
     const rok3 = CONSTANTS.ROK_TOTAL - rok1 - rok2;
     
     // Verify that all values are positive and reasonable
