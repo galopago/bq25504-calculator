@@ -1,19 +1,19 @@
-# 🔋 BQ25504 Calculator
+# BQ25504 Calculator
 
 A professional web calculator for configuring BQ25504 chip resistors, built with HTML, CSS and vanilla JavaScript.
 
-## ✨ Features
+## Features
 
-- ✅ **Modern and responsive interface** - Adapts to mobile, tablets and desktop
-- ✅ **Precise calculations** - Exact formulas from BQ25504 datasheet
-- ✅ **Range validation** - Prevents out-of-specification values
-- ✅ **Smooth animations** - Attractive visual effects
-- ✅ **Real-time calculation** - Instant results when changing values
-- ✅ **No dependencies** - Pure HTML, CSS and JavaScript only
+- **Modern and responsive interface** - Adapts to mobile, tablets and desktop
+- **Precise calculations** - Exact formulas from BQ25504 datasheet
+- **Range validation** - Prevents out-of-specification values
+- **Smooth animations** - Attractive visual effects
+- **Real-time calculation** - Instant results when changing values
+- **No dependencies** - Pure HTML, CSS and JavaScript only
 
-## 🚀 See it in Action
+## See it in Action
 
-### 🌐 Direct Links (Click to open)
+### Direct Links (Click to open)
 
 [![Open with HTML Preview](https://img.shields.io/badge/HTML%20Preview-Open%20Calculator-blue?style=for-the-badge&logo=html5)](https://htmlpreview.github.io/?https://raw.githubusercontent.com/galopago/bq25504-calculator/main/index.html)
 
@@ -21,13 +21,13 @@ A professional web calculator for configuring BQ25504 chip resistors, built with
 
 [![Open with Statically](https://img.shields.io/badge/Statically-Open%20Calculator-orange?style=for-the-badge&logo=cdn)](https://cdn.statically.io/gh/galopago/bq25504-calculator/main/index.html)
 
-### 🔗 Alternative Links
+### Alternative Links
 
 - **HTML Preview**: https://htmlpreview.github.io/?https://raw.githubusercontent.com/galopago/bq25504-calculator/main/index.html
 - **Raw.githack**: https://raw.githack.com/galopago/bq25504-calculator/main/index.html
 - **Statically CDN**: https://cdn.statically.io/gh/galopago/bq25504-calculator/main/index.html
 
-## 🛠️ How to Use
+## How to Use
 
 1. **Open any of the links above**
 2. **Configure VBAT_OV** - Maximum battery voltage (2.5V - 5.25V)
@@ -36,20 +36,20 @@ A professional web calculator for configuring BQ25504 chip resistors, built with
 5. **Configure MPPT** - Maximum power point percentage (50% - 100%)
 6. **See the resistor values** calculated automatically
 
-## ⌨️ Keyboard Shortcuts
+## Keyboard Shortcuts
 
 - **Tab**: Move between fields
 - **Type**: Automatically calculates resistors
 - **Change values**: Real-time updates
 
-## 📱 Responsive Design
+## Responsive Design
 
 The calculator adapts perfectly to:
-- 📱 **Mobile** (320px+) - Optimized vertical layout
-- 📱 **Tablets** (768px+) - 2-column grid
-- 💻 **Desktop** (1024px+) - 4-column grid
+- **Mobile** (320px+) - Optimized vertical layout
+- **Tablets** (768px+) - 2-column grid
+- **Desktop** (1024px+) - 4-column grid
 
-## 🎨 Technologies Used
+## Technologies Used
 
 - **HTML5** - Semantic structure
 - **CSS3** - Modern styles with Flexbox and Grid
@@ -57,7 +57,7 @@ The calculator adapts perfectly to:
 - **Datasheet Formulas** - Exact Texas Instruments implementation
 - **Real-time validation** - Dynamic ranges and constraints
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 bq25504-calculator/
@@ -68,14 +68,14 @@ bq25504-calculator/
 └── README.md           # Documentation
 ```
 
-## 🔧 Calculated Parameters
+## Calculated Parameters
 
 - **VBAT_OV**: ROV1 + ROV2 = 10 MΩ (2.5V - 5.25V)
 - **VBAT_UV**: RUV1 + RUV2 = 10 MΩ (2.5V - 5.25V)  
 - **Battery OK**: ROK1 + ROK2 + ROK3 = 10 MΩ
 - **MPPT**: ROC1 + ROC2 = 20 MΩ (50% - 100%)
 
-## 🔧 Local Installation (Optional)
+## Local Installation (Optional)
 
 If you want to run locally:
 
@@ -92,7 +92,7 @@ python3 -m http.server 8000
 # Then go to: http://localhost:8000
 ```
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! If you have ideas to improve the calculator:
 
@@ -102,14 +102,14 @@ Contributions are welcome! If you have ideas to improve the calculator:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
+## Author
 
 **Alberto Nunez** - [@galopago](https://github.com/galopago)
 
 ---
 
-⭐ **Give it a star if you like this project!** ⭐
+**Give it a star if you like this project!**
