@@ -29,12 +29,12 @@ function calculateVBAT_OV() {
         return;
     }
     
-    // Correct BQ25504 formula according to equations.txt:
-    // VBAT_OV = VREF * (1 + ROV2/ROV1)
+    // Correct BQ25504 formula according to Excel:
+    // VBAT_OV = VREF * (1 + ROV2/ROV1) * 3/2
     // Where ROV1 + ROV2 = 10 MΩ
-    // Solving: ROV1 = ROV_TOTAL * VREF / VBAT_OV
+    // Solving: ROV1 = ROV_TOTAL * VREF / VBAT_OV * 3/2
     // ROV2 = ROV_TOTAL - ROV1
-    const rov1 = CONSTANTS.ROV_TOTAL * CONSTANTS.VREF / vbat_ov;
+    const rov1 = CONSTANTS.ROV_TOTAL * (3/2) * CONSTANTS.VREF / vbat_ov;
     const rov2 = CONSTANTS.ROV_TOTAL - rov1;
     
     // Verify that values are positive
@@ -56,7 +56,7 @@ function calculateVBAT_UV() {
         return;
     }
     
-    // Correct BQ25504 formula according to equations.txt:
+    // Correct BQ25504 formula according to Excel:
     // VBAT_UV = VREF * (1 + RUV2/RUV1)
     // Where RUV1 + RUV2 = 10 MΩ
     // Solving: RUV1 = RUV_TOTAL * VREF / VBAT_UV
@@ -85,22 +85,15 @@ function calculateBatteryOK() {
         return;
     }
     
-    // Correct BQ25504 formulas according to equations.txt:
-    // VBAT_OK_PROG = VREF * (1 + ROK2/ROK1)
-    // VBAT_OK_HYST = VREF * (1 + (ROK2+ROK3)/ROK1)
-    // Where ROK1 + ROK2 + ROK3 = 10 MΩ
+    // Correct BQ25504 formulas according to Excel:
+    // ROK1 = VREF / VBAT_OK_PROG * RSUM
+    // ROK2 = (VBAT_OK_HYST / VREF - 1) * ROK1
+    // ROK3 = RSUM - ROK1 - ROK2
+    // VBAT_OK = VREF * (1 + ROK2/ROK1)
+    // VBAT_OK_HYST = VREF * ((ROK1+ROK2+ROK3)/ROK1)
     
-    // Solving the system of equations:
-    // From VBAT_OK_PROG: ROK2 = ROK1 * (VBAT_OK_PROG/VREF - 1)
-    // From VBAT_OK_HYST: ROK2 + ROK3 = ROK1 * (VBAT_OK_HYST/VREF - 1)
-    // From constraint: ROK3 = 10M - ROK1 - ROK2
-    
-    const ratio_prog = (vbat_ok_prog - CONSTANTS.VREF) / CONSTANTS.VREF;
-    const ratio_hyst = (vbat_ok_hyst - CONSTANTS.VREF) / CONSTANTS.VREF;
-    
-    // ROK1 = 10M / (1 + ratio_prog + ratio_hyst)
-    const rok1 = CONSTANTS.ROK_TOTAL / (1 + ratio_prog + ratio_hyst);
-    const rok2 = rok1 * ratio_prog;
+    const rok1 = CONSTANTS.VREF / vbat_ok_prog * CONSTANTS.ROK_TOTAL;
+    const rok2 = (vbat_ok_hyst / CONSTANTS.VREF - 1) * rok1;
     const rok3 = CONSTANTS.ROK_TOTAL - rok1 - rok2;
     
     // Verify that all values are positive and reasonable
