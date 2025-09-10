@@ -1,114 +1,115 @@
-# 🔋 Calculadora BQ25504
+# 🔋 BQ25504 Calculator
 
-Una calculadora web profesional para configurar resistencias del chip BQ25504, construida con HTML, CSS y JavaScript vanilla.
+A professional web calculator for configuring BQ25504 chip resistors, built with HTML, CSS and vanilla JavaScript.
 
-## ✨ Características
+## ✨ Features
 
-- ✅ **Interfaz moderna y responsiva** - Se adapta a móviles, tablets y desktop
-- ✅ **Cálculos precisos** - Fórmulas exactas del datasheet BQ25504
-- ✅ **Validación de rangos** - Previene valores fuera de especificación
-- ✅ **Animaciones suaves** - Efectos visuales atractivos
-- ✅ **Cálculo en tiempo real** - Resultados instantáneos al cambiar valores
-- ✅ **Sin dependencias** - Solo HTML, CSS y JavaScript puro
+- ✅ **Modern and responsive interface** - Adapts to mobile, tablets and desktop
+- ✅ **Precise calculations** - Exact formulas from BQ25504 datasheet
+- ✅ **Range validation** - Prevents out-of-specification values
+- ✅ **Smooth animations** - Attractive visual effects
+- ✅ **Real-time calculation** - Instant results when changing values
+- ✅ **No dependencies** - Pure HTML, CSS and JavaScript only
 
-## 🚀 Ver en Acción
+## 🚀 See it in Action
 
-### 🌐 Enlaces Directos (Haz clic para abrir)
+### 🌐 Direct Links (Click to open)
 
-[![Abrir con HTML Preview](https://img.shields.io/badge/HTML%20Preview-Abrir%20Calculadora-blue?style=for-the-badge&logo=html5)](https://htmlpreview.github.io/?https://raw.githubusercontent.com/galopago/bq25504-calculator/main/index.html)
+[![Open with HTML Preview](https://img.shields.io/badge/HTML%20Preview-Open%20Calculator-blue?style=for-the-badge&logo=html5)](https://htmlpreview.github.io/?https://raw.githubusercontent.com/galopago/bq25504-calculator/main/index.html)
 
-[![Abrir con Raw.githack](https://img.shields.io/badge/Raw.githack-Abrir%20Calculadora-green?style=for-the-badge&logo=github)](https://raw.githack.com/galopago/bq25504-calculator/main/index.html)
+[![Open with Raw.githack](https://img.shields.io/badge/Raw.githack-Open%20Calculator-green?style=for-the-badge&logo=github)](https://raw.githack.com/galopago/bq25504-calculator/main/index.html)
 
-[![Abrir con Statically](https://img.shields.io/badge/Statically-Abrir%20Calculadora-orange?style=for-the-badge&logo=cdn)](https://cdn.statically.io/gh/galopago/bq25504-calculator/main/index.html)
+[![Open with Statically](https://img.shields.io/badge/Statically-Open%20Calculator-orange?style=for-the-badge&logo=cdn)](https://cdn.statically.io/gh/galopago/bq25504-calculator/main/index.html)
 
-### 🔗 Enlaces Alternativos
+### 🔗 Alternative Links
 
 - **HTML Preview**: https://htmlpreview.github.io/?https://raw.githubusercontent.com/galopago/bq25504-calculator/main/index.html
 - **Raw.githack**: https://raw.githack.com/galopago/bq25504-calculator/main/index.html
 - **Statically CDN**: https://cdn.statically.io/gh/galopago/bq25504-calculator/main/index.html
 
-## 🛠️ Cómo Usar
+## 🛠️ How to Use
 
-1. **Abre cualquiera de los enlaces de arriba**
-2. **Configura VBAT_OV** - Voltaje máximo de batería (2.2V - 5.2V)
-3. **Configura VBAT_UV** - Voltaje mínimo de batería (2.2V - 5.2V)
-4. **Configura Battery OK** - Umbrales de batería OK y histéresis
-5. **Configura MPPT** - Porcentaje del punto de máxima potencia (50% - 100%)
-6. **Ve los valores de resistencias** calculados automáticamente
+1. **Open any of the links above**
+2. **Configure VBAT_OV** - Maximum battery voltage (2.5V - 5.25V)
+3. **Configure VBAT_UV** - Minimum battery voltage (2.5V - 5.25V)
+4. **Configure Battery OK** - Battery OK thresholds and hysteresis
+5. **Configure MPPT** - Maximum power point percentage (50% - 100%)
+6. **See the resistor values** calculated automatically
 
-## ⌨️ Atajos de Teclado
+## ⌨️ Keyboard Shortcuts
 
-- **Tab**: Moverse entre campos
-- **Escribir**: Calcula automáticamente las resistencias
-- **Cambiar valores**: Actualización en tiempo real
+- **Tab**: Move between fields
+- **Type**: Automatically calculates resistors
+- **Change values**: Real-time updates
 
 ## 📱 Responsive Design
 
-La calculadora se adapta perfectamente a:
-- 📱 **Móviles** (320px+) - Layout vertical optimizado
-- 📱 **Tablets** (768px+) - Grid de 2 columnas
-- 💻 **Desktop** (1024px+) - Grid de 4 columnas
+The calculator adapts perfectly to:
+- 📱 **Mobile** (320px+) - Optimized vertical layout
+- 📱 **Tablets** (768px+) - 2-column grid
+- 💻 **Desktop** (1024px+) - 4-column grid
 
-## 🎨 Tecnologías Utilizadas
+## 🎨 Technologies Used
 
-- **HTML5** - Estructura semántica
-- **CSS3** - Estilos modernos con Flexbox y Grid
-- **JavaScript ES6+** - Cálculos precisos del BQ25504
-- **Fórmulas del Datasheet** - Implementación exacta de Texas Instruments
-- **Validación en tiempo real** - Rangos y restricciones dinámicas
+- **HTML5** - Semantic structure
+- **CSS3** - Modern styles with Flexbox and Grid
+- **JavaScript ES6+** - Precise BQ25504 calculations
+- **Datasheet Formulas** - Exact Texas Instruments implementation
+- **Real-time validation** - Dynamic ranges and constraints
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 
 ```
 bq25504-calculator/
-├── index.html          # Calculadora BQ25504
-├── styles.css          # Estilos responsivos
-├── script.js           # Fórmulas del BQ25504
-└── README.md           # Documentación
+├── index.html          # BQ25504 Calculator
+├── styles.css          # Responsive styles
+├── script.js           # BQ25504 formulas
+├── equations.txt       # Source of truth equations
+└── README.md           # Documentation
 ```
 
-## 🔧 Parámetros Calculados
+## 🔧 Calculated Parameters
 
-- **VBAT_OV**: ROV1 + ROV2 = 10 MΩ (2.2V - 5.2V)
-- **VBAT_UV**: RUV1 + RUV2 = 10 MΩ (2.2V - 5.2V)  
+- **VBAT_OV**: ROV1 + ROV2 = 10 MΩ (2.5V - 5.25V)
+- **VBAT_UV**: RUV1 + RUV2 = 10 MΩ (2.5V - 5.25V)  
 - **Battery OK**: ROK1 + ROK2 + ROK3 = 10 MΩ
 - **MPPT**: ROC1 + ROC2 = 20 MΩ (50% - 100%)
 
-## 🔧 Instalación Local (Opcional)
+## 🔧 Local Installation (Optional)
 
-Si quieres ejecutar localmente:
+If you want to run locally:
 
 ```bash
-# Clonar el repositorio
+# Clone the repository
 git clone https://github.com/galopago/bq25504-calculator.git
 
-# Navegar al directorio
+# Navigate to directory
 cd bq25504-calculator
 
-# Abrir index.html en tu navegador
-# O usar un servidor local:
+# Open index.html in your browser
+# Or use a local server:
 python3 -m http.server 8000
-# Luego ir a: http://localhost:8000
+# Then go to: http://localhost:8000
 ```
 
-## 🤝 Contribuciones
+## 🤝 Contributing
 
-¡Las contribuciones son bienvenidas! Si tienes ideas para mejorar la calculadora:
+Contributions are welcome! If you have ideas to improve the calculator:
 
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
+1. Fork the project
+2. Create a branch for your feature (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📄 Licencia
+## 📄 License
 
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para detalles.
+This project is under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Autor
+## 👨‍💻 Author
 
 **Alberto Nunez** - [@galopago](https://github.com/galopago)
 
 ---
 
-⭐ **¡Dale una estrella si te gusta este proyecto!** ⭐
+⭐ **Give it a star if you like this project!** ⭐
