@@ -1,4 +1,4 @@
-// Constantes del BQ25504
+// BQ25504 Constants
 const CONSTANTS = {
     VBAT_OV_MIN: 2.5,
     VBAT_OV_MAX: 5.25,
@@ -7,12 +7,12 @@ const CONSTANTS = {
     RUV_TOTAL: 10e6,  // 10 MΩ
     ROK_TOTAL: 10e6,  // 10 MΩ
     ROC_TOTAL: 20e6,  // 20 MΩ
-    VREF: 1.25,       // Voltaje de referencia interno
+    VREF: 1.25,       // Internal reference voltage
     MPP_MIN: 50,
     MPP_MAX: 100
 };
 
-// Función principal para calcular todas las resistencias
+// Main function to calculate all resistances
 function calculateAllResistances() {
     calculateVBAT_OV();
     calculateVBAT_UV();
@@ -20,7 +20,7 @@ function calculateAllResistances() {
     calculateMPPT();
 }
 
-// Cálculo de VBAT_OV (Overvoltage)
+// VBAT_OV (Overvoltage) calculation
 function calculateVBAT_OV() {
     const vbat_ov = parseFloat(document.getElementById('vbat_ov').value);
     
@@ -29,15 +29,15 @@ function calculateVBAT_OV() {
         return;
     }
     
-    // Fórmula correcta del BQ25504 según equations.txt:
+    // Correct BQ25504 formula according to equations.txt:
     // VBAT_OV = VREF * (1 + ROV2/ROV1)
-    // Donde ROV1 + ROV2 = 10 MΩ
-    // Despejando: ROV1 = ROV_TOTAL * VREF / VBAT_OV
+    // Where ROV1 + ROV2 = 10 MΩ
+    // Solving: ROV1 = ROV_TOTAL * VREF / VBAT_OV
     // ROV2 = ROV_TOTAL - ROV1
     const rov1 = CONSTANTS.ROV_TOTAL * CONSTANTS.VREF / vbat_ov;
     const rov2 = CONSTANTS.ROV_TOTAL - rov1;
     
-    // Verificar que los valores sean positivos
+    // Verify that values are positive
     if (rov1 < 0 || rov2 < 0) {
         clearResults(['rov1_result', 'rov2_result']);
         return;
@@ -47,7 +47,7 @@ function calculateVBAT_OV() {
     displayResistance('rov2_result', rov2);
 }
 
-// Cálculo de VBAT_UV (Undervoltage)
+// VBAT_UV (Undervoltage) calculation
 function calculateVBAT_UV() {
     const vbat_uv = parseFloat(document.getElementById('vbat_uv').value);
     
@@ -56,15 +56,15 @@ function calculateVBAT_UV() {
         return;
     }
     
-    // Fórmula correcta del BQ25504 según equations.txt:
+    // Correct BQ25504 formula according to equations.txt:
     // VBAT_UV = VREF * (1 + RUV2/RUV1)
-    // Donde RUV1 + RUV2 = 10 MΩ
-    // Despejando: RUV1 = RUV_TOTAL * VREF / VBAT_UV
+    // Where RUV1 + RUV2 = 10 MΩ
+    // Solving: RUV1 = RUV_TOTAL * VREF / VBAT_UV
     // RUV2 = RUV_TOTAL - RUV1
     const ruv1 = CONSTANTS.RUV_TOTAL * CONSTANTS.VREF / vbat_uv;
     const ruv2 = CONSTANTS.RUV_TOTAL - ruv1;
     
-    // Verificar que los valores sean positivos
+    // Verify that values are positive
     if (ruv1 < 0 || ruv2 < 0) {
         clearResults(['ruv1_result', 'ruv2_result']);
         return;
@@ -74,7 +74,7 @@ function calculateVBAT_UV() {
     displayResistance('ruv2_result', ruv2);
 }
 
-// Cálculo de Battery OK Threshold
+// Battery OK Threshold calculation
 function calculateBatteryOK() {
     const vbat_ok_prog = parseFloat(document.getElementById('vbat_ok_prog').value);
     const vbat_ok_hyst = parseFloat(document.getElementById('vbat_ok_hyst').value);
@@ -85,15 +85,15 @@ function calculateBatteryOK() {
         return;
     }
     
-    // Fórmulas correctas del BQ25504 según equations.txt:
+    // Correct BQ25504 formulas according to equations.txt:
     // VBAT_OK_PROG = VREF * (1 + ROK2/ROK1)
     // VBAT_OK_HYST = VREF * (1 + (ROK2+ROK3)/ROK1)
-    // Donde ROK1 + ROK2 + ROK3 = 10 MΩ
+    // Where ROK1 + ROK2 + ROK3 = 10 MΩ
     
-    // Resolviendo el sistema de ecuaciones:
-    // De VBAT_OK_PROG: ROK2 = ROK1 * (VBAT_OK_PROG/VREF - 1)
-    // De VBAT_OK_HYST: ROK2 + ROK3 = ROK1 * (VBAT_OK_HYST/VREF - 1)
-    // De la restricción: ROK3 = 10M - ROK1 - ROK2
+    // Solving the system of equations:
+    // From VBAT_OK_PROG: ROK2 = ROK1 * (VBAT_OK_PROG/VREF - 1)
+    // From VBAT_OK_HYST: ROK2 + ROK3 = ROK1 * (VBAT_OK_HYST/VREF - 1)
+    // From constraint: ROK3 = 10M - ROK1 - ROK2
     
     const ratio_prog = (vbat_ok_prog - CONSTANTS.VREF) / CONSTANTS.VREF;
     const ratio_hyst = (vbat_ok_hyst - CONSTANTS.VREF) / CONSTANTS.VREF;
@@ -103,7 +103,7 @@ function calculateBatteryOK() {
     const rok2 = rok1 * ratio_prog;
     const rok3 = CONSTANTS.ROK_TOTAL - rok1 - rok2;
     
-    // Verificar que todos los valores sean positivos y razonables
+    // Verify that all values are positive and reasonable
     if (rok1 < 0 || rok2 < 0 || rok3 < 0 || rok1 > CONSTANTS.ROK_TOTAL || rok2 > CONSTANTS.ROK_TOTAL || rok3 > CONSTANTS.ROK_TOTAL) {
         clearResults(['rok1_result', 'rok2_result', 'rok3_result']);
         return;
@@ -114,7 +114,7 @@ function calculateBatteryOK() {
     displayResistance('rok3_result', rok3);
 }
 
-// Cálculo de MPPT Sampling Network
+// MPPT Sampling Network calculation
 function calculateMPPT() {
     const mpp_threshold = parseFloat(document.getElementById('mpp_threshold').value);
     
@@ -123,15 +123,15 @@ function calculateMPPT() {
         return;
     }
     
-    // Fórmula correcta del BQ25504 para MPPT:
+    // Correct BQ25504 formula for MPPT:
     // MPP% = 100% * (ROC1 / (ROC1 + ROC2))
-    // Donde ROC1 + ROC2 = 20 MΩ
-    // Despejando: ROC1 = ROC_TOTAL * (MPP_THRESHOLD / 100)
+    // Where ROC1 + ROC2 = 20 MΩ
+    // Solving: ROC1 = ROC_TOTAL * (MPP_THRESHOLD / 100)
     // ROC2 = ROC_TOTAL - ROC1
     const roc1 = CONSTANTS.ROC_TOTAL * (mpp_threshold / 100);
     const roc2 = CONSTANTS.ROC_TOTAL - roc1;
     
-    // Verificar que los valores sean positivos
+    // Verify that values are positive
     if (roc1 < 0 || roc2 < 0) {
         clearResults(['roc1_result', 'roc2_result']);
         return;
@@ -141,17 +141,17 @@ function calculateMPPT() {
     displayResistance('roc2_result', roc2);
 }
 
-// Función para validar voltajes
+// Function to validate voltages
 function isValidVoltage(value, min, max) {
     return !isNaN(value) && value >= min && value <= max;
 }
 
-// Función para validar MPP threshold
+// Function to validate MPP threshold
 function isValidMPP(value) {
     return !isNaN(value) && value >= CONSTANTS.MPP_MIN && value <= CONSTANTS.MPP_MAX;
 }
 
-// Función para mostrar resistencias formateadas
+// Function to display formatted resistances
 function displayResistance(elementId, resistance) {
     const element = document.getElementById(elementId);
     
@@ -161,7 +161,7 @@ function displayResistance(elementId, resistance) {
         return;
     }
     
-    // Formatear resistencia según su magnitud
+    // Format resistance according to its magnitude
     let formattedValue;
     if (resistance >= 1e6) {
         formattedValue = (resistance / 1e6).toFixed(2) + ' MΩ';
@@ -175,7 +175,7 @@ function displayResistance(elementId, resistance) {
     element.style.color = '#38b2ac';
 }
 
-// Función para limpiar resultados
+// Function to clear results
 function clearResults(elementIds) {
     elementIds.forEach(id => {
         const element = document.getElementById(id);
@@ -184,14 +184,14 @@ function clearResults(elementIds) {
     });
 }
 
-// Función para encontrar el valor estándar más cercano de resistencia
+// Function to find the nearest standard resistance value
 function findNearestStandardResistance(resistance) {
-    // Valores estándar de resistencias 1% (E96 series)
+    // Standard 1% resistance values (E96 series)
     const standardValues = [
         100, 102, 105, 107, 110, 113, 115, 118, 121, 124, 127, 130, 133, 137, 140, 143, 147, 150, 154, 158, 162, 165, 169, 174, 178, 182, 187, 191, 196, 200, 205, 210, 215, 221, 226, 232, 237, 243, 249, 255, 261, 267, 274, 280, 287, 294, 301, 309, 316, 324, 332, 340, 348, 357, 365, 374, 383, 392, 402, 412, 422, 432, 442, 453, 464, 475, 487, 499, 511, 523, 536, 549, 562, 576, 590, 604, 619, 634, 649, 665, 681, 698, 715, 732, 750, 768, 787, 806, 825, 845, 866, 887, 909, 931, 953, 976
     ];
     
-    // Escalar según la magnitud de la resistencia
+    // Scale according to resistance magnitude
     let scale = 1;
     if (resistance >= 1e6) {
         scale = 1e6;
@@ -209,17 +209,17 @@ function findNearestStandardResistance(resistance) {
 
 // Event listeners
 document.addEventListener('DOMContentLoaded', function() {
-    // Agregar event listeners a todos los inputs
+    // Add event listeners to all inputs
     const inputs = document.querySelectorAll('input[type="number"]');
     inputs.forEach(input => {
         input.addEventListener('input', calculateAllResistances);
         input.addEventListener('change', calculateAllResistances);
     });
     
-    // Calcular inicialmente
+    // Calculate initially
     calculateAllResistances();
     
-    // Agregar validación en tiempo real
+    // Add real-time validation
     inputs.forEach(input => {
         input.addEventListener('blur', function() {
             const value = parseFloat(this.value);
@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Función para exportar resultados (opcional)
+// Function to export results (optional)
 function exportResults() {
     const results = {
         vbat_ov: {
@@ -269,6 +269,6 @@ function exportResults() {
         }
     };
     
-    console.log('Resultados BQ25504:', results);
+    console.log('BQ25504 Results:', results);
     return results;
 }

@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora BQ25504 - Configuración de Resistencias</title>
+    <title>BQ25504 Calculator - Resistor Configuration</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🔋 Calculadora BQ25504</h1>
-            <p>Configuración de resistencias para el chip BQ25504</p>
+            <h1>🔋 BQ25504 Calculator</h1>
+            <p>Resistor configuration for BQ25504 chip</p>
         </header>
         
         <main>
             <div class="calculator-grid">
                 <!-- VBAT_OV Section -->
                 <div class="calc-section">
-                    <h2>⚡ Voltaje Máximo de Batería (VBAT_OV)</h2>
-                    <p class="section-info">ROV1 + ROV2 = 10 MΩ | Rango: 2.5V - 5.25V</p>
+                    <h2>⚡ Battery Maximum Voltage (VBAT_OV)</h2>
+                    <p class="section-info">ROV1 + ROV2 = 10 MΩ | Range: 2.5V - 5.25V</p>
                     
                     <div class="input-group">
-                        <label for="vbat_ov">Voltaje deseado (V):</label>
+                        <label for="vbat_ov">Desired voltage (V):</label>
                         <input type="number" id="vbat_ov" step="0.1" min="2.5" max="5.25" placeholder="3.7">
                     </div>
                     
@@ -39,11 +39,11 @@
 
                 <!-- VBAT_UV Section -->
                 <div class="calc-section">
-                    <h2>🔋 Voltaje Mínimo de Batería (VBAT_UV)</h2>
-                    <p class="section-info">RUV1 + RUV2 = 10 MΩ | Mínimo: 2.5V</p>
+                    <h2>🔋 Battery Minimum Voltage (VBAT_UV)</h2>
+                    <p class="section-info">RUV1 + RUV2 = 10 MΩ | Minimum: 2.5V</p>
                     
                     <div class="input-group">
-                        <label for="vbat_uv">Voltaje deseado (V):</label>
+                        <label for="vbat_uv">Desired voltage (V):</label>
                         <input type="number" id="vbat_uv" step="0.1" min="2.5" max="5.25" placeholder="2.5">
                     </div>
                     
@@ -61,7 +61,7 @@
 
                 <!-- Battery OK Threshold Section -->
                 <div class="calc-section">
-                    <h2>✅ Umbral de Batería OK</h2>
+                    <h2>✅ Battery OK Threshold</h2>
                     <p class="section-info">ROK1 + ROK2 + ROK3 = 10 MΩ</p>
                     
                     <div class="input-group">
@@ -92,11 +92,11 @@
 
                 <!-- MPPT Sampling Network Section -->
                 <div class="calc-section">
-                    <h2>☀️ Red de Muestreo MPPT</h2>
+                    <h2>☀️ MPPT Sampling Network</h2>
                     <p class="section-info">ROC1 + ROC2 = 20 MΩ</p>
                     
                     <div class="input-group">
-                        <label for="mpp_threshold">Umbral MPP (% de VIN_DC):</label>
+                        <label for="mpp_threshold">MPP threshold (% of VIN_DC):</label>
                         <input type="number" id="mpp_threshold" step="1" min="50" max="100" placeholder="80">
                     </div>
                     
@@ -115,7 +115,7 @@
         </main>
         
         <footer>
-            <p>💡 Ingresa los valores deseados para calcular las resistencias necesarias</p>
+            <p>💡 Enter the desired values to calculate the required resistors</p>
         </footer>
     </div>
     
