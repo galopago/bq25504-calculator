@@ -5,7 +5,7 @@
    height="61.184834mm"
    viewBox="0 0 145.36859 61.184833"
    id="svg8338"
-   sodipodi:docname="bq25504-svg.svg"
+   sodipodi:docname="bq25504.svg"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -27,15 +27,16 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.67151467"
-     inkscape:cx="359.63474"
-     inkscape:cy="36.484683"
+     inkscape:zoom="5.3721173"
+     inkscape:cx="135.88683"
+     inkscape:cy="134.67688"
      inkscape:window-width="1366"
      inkscape:window-height="706"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg8338" />
+     inkscape:current-layer="svg8338"
+     showguides="true" />
   <title
      id="title2">SVG Image created as bq25504-svg.svg date 2025/09/14 22:47:37 </title>
   <desc
@@ -61,14 +62,15 @@
      id="g14"
      transform="translate(-53.403203,-64.0033)" />
   <g
-     style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-     id="g120"
-     transform="translate(-53.403203,-64.0033)">
-    <g
-       id="g16" />
+     id="g16"
+     transform="translate(-53.403203,-64.0033)"
+     style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+  <g
+     id="g9355">
     <g
        style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.254;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="g20">
+       id="g20"
+       transform="translate(-53.403203,-64.0033)">
       <rect
          x="81.533997"
          y="107.95"
@@ -77,170 +79,25 @@
          rx="0.000000"
          id="rect18" />
     </g>
-    <g
-       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="g118">
-      <path
-         d="m 82.55,107.95 v -1.27"
-         id="path22" />
-      <path
-         d="m 82.55,113.03 v 1.27"
-         id="path24" />
-      <text
-         x="77.540199"
-         y="109.855"
-         textLength="4.9203"
-         font-size="1.6933px"
-         lengthAdjust="spacingAndGlyphs"
-         text-anchor="middle"
-         opacity="0"
-         id="text26">Roc1</text>
-      <g
-         class="stroked-text"
-         id="g116">
-        <desc
-           id="desc28">Roc1</desc>
-        <path
-           d="m 76.2097,109.7995 -0.4233,-0.6047"
-           id="path30" />
-        <path
-           d="m 75.484,109.7995 v -1.27"
-           id="path32" />
-        <path
-           d="m 75.484,108.5295 h 0.4838"
-           id="path34" />
-        <path
-           d="m 75.9678,108.5295 0.121,0.0605"
-           id="path36" />
-        <path
-           d="m 76.0888,108.59 0.0605,0.0605"
-           id="path38" />
-        <path
-           d="m 76.1493,108.6505 0.0604,0.1209"
-           id="path40" />
-        <path
-           d="m 76.2097,108.7714 v 0.1815"
-           id="path42" />
-        <path
-           d="m 76.2097,108.9529 -0.0604,0.1209"
-           id="path44" />
-        <path
-           d="m 76.1493,109.0738 -0.0605,0.0605"
-           id="path46" />
-        <path
-           d="m 76.0888,109.1343 -0.121,0.0605"
-           id="path48" />
-        <path
-           d="M 75.9678,109.1948 H 75.484"
-           id="path50" />
-        <path
-           d="m 76.9355,109.7995 -0.121,-0.0604"
-           id="path52" />
-        <path
-           d="M 76.8145,109.7391 76.754,109.6786"
-           id="path54" />
-        <path
-           d="m 76.754,109.6786 -0.0604,-0.121"
-           id="path56" />
-        <path
-           d="m 76.6936,109.5576 v -0.3628"
-           id="path58" />
-        <path
-           d="m 76.6936,109.1948 0.0604,-0.121"
-           id="path60" />
-        <path
-           d="m 76.754,109.0738 0.0605,-0.0605"
-           id="path62" />
-        <path
-           d="m 76.8145,109.0133 0.121,-0.0604"
-           id="path64" />
-        <path
-           d="m 76.9355,108.9529 h 0.1814"
-           id="path66" />
-        <path
-           d="m 77.1169,108.9529 0.1209,0.0604"
-           id="path68" />
-        <path
-           d="m 77.2378,109.0133 0.0605,0.0605"
-           id="path70" />
-        <path
-           d="m 77.2983,109.0738 0.0605,0.121"
-           id="path72" />
-        <path
-           d="m 77.3588,109.1948 v 0.3628"
-           id="path74" />
-        <path
-           d="m 77.3588,109.5576 -0.0605,0.121"
-           id="path76" />
-        <path
-           d="m 77.2983,109.6786 -0.0605,0.0605"
-           id="path78" />
-        <path
-           d="m 77.2378,109.7391 -0.1209,0.0604"
-           id="path80" />
-        <path
-           d="M 77.1169,109.7995 H 76.9355"
-           id="path82" />
-        <path
-           d="m 78.4473,109.7391 -0.1209,0.0604"
-           id="path84" />
-        <path
-           d="M 78.3264,109.7995 H 78.0845"
-           id="path86" />
-        <path
-           d="m 78.0845,109.7995 -0.121,-0.0604"
-           id="path88" />
-        <path
-           d="M 77.9635,109.7391 77.903,109.6786"
-           id="path90" />
-        <path
-           d="m 77.903,109.6786 -0.0604,-0.121"
-           id="path92" />
-        <path
-           d="m 77.8426,109.5576 v -0.3628"
-           id="path94" />
-        <path
-           d="m 77.8426,109.1948 0.0604,-0.121"
-           id="path96" />
-        <path
-           d="m 77.903,109.0738 0.0605,-0.0605"
-           id="path98" />
-        <path
-           d="m 77.9635,109.0133 0.121,-0.0604"
-           id="path100" />
-        <path
-           d="m 78.0845,108.9529 h 0.2419"
-           id="path102" />
-        <path
-           d="m 78.3264,108.9529 0.1209,0.0604"
-           id="path104" />
-        <path
-           d="M 79.6569,109.7995 H 78.9312"
-           id="path106" />
-        <path
-           d="m 79.294,109.7995 v -1.27"
-           id="path108" />
-        <path
-           d="m 79.294,108.5295 -0.1209,0.1815"
-           id="path110" />
-        <path
-           d="m 79.1731,108.711 -0.121,0.1209"
-           id="path112" />
-        <path
-           d="m 79.0521,108.8319 -0.1209,0.0605"
-           id="path114" />
-      </g>
-    </g>
+    <path
+       d="m 29.146797,43.9467 v -1.27"
+       id="path22"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+    <path
+       d="m 29.146797,49.0267 v 1.27"
+       id="path24"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
   </g>
   <g
-     style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-     id="g226"
-     transform="translate(-53.403203,-64.0033)">
-    <g
-       id="g122" />
+     id="g122"
+     transform="translate(-53.403203,-64.0033)"
+     style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+  <g
+     id="g4437">
     <g
        style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.254;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="g126">
+       id="g126"
+       transform="translate(-53.403203,-64.0033)">
       <rect
          x="108.204"
          y="81.279999"
@@ -249,160 +106,14 @@
          rx="0.000000"
          id="rect124" />
     </g>
-    <g
-       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="g224">
-      <path
-         d="M 109.22,81.28 V 80.01"
-         id="path128" />
-      <path
-         d="m 109.22,86.36 v 1.27"
-         id="path130" />
-      <text
-         x="104.2405"
-         y="83.184998"
-         textLength="4.8597999"
-         font-size="1.6933px"
-         lengthAdjust="spacingAndGlyphs"
-         text-anchor="middle"
-         opacity="0"
-         id="text132">Rok3</text>
-      <g
-         class="stroked-text"
-         id="g222">
-        <desc
-           id="desc134">Rok3</desc>
-        <path
-           d="m 102.9402,83.1295 -0.4233,-0.6047"
-           id="path136" />
-        <path
-           d="m 102.2145,83.1295 v -1.27"
-           id="path138" />
-        <path
-           d="m 102.2145,81.8595 h 0.4838"
-           id="path140" />
-        <path
-           d="m 102.6983,81.8595 0.121,0.0605"
-           id="path142" />
-        <path
-           d="m 102.8193,81.92 0.0605,0.0605"
-           id="path144" />
-        <path
-           d="m 102.8798,81.9805 0.0604,0.1209"
-           id="path146" />
-        <path
-           d="m 102.9402,82.1014 v 0.1815"
-           id="path148" />
-        <path
-           d="m 102.9402,82.2829 -0.0604,0.1209"
-           id="path150" />
-        <path
-           d="m 102.8798,82.4038 -0.0605,0.0605"
-           id="path152" />
-        <path
-           d="m 102.8193,82.4643 -0.121,0.0605"
-           id="path154" />
-        <path
-           d="m 102.6983,82.5248 h -0.4838"
-           id="path156" />
-        <path
-           d="m 103.666,83.1295 -0.121,-0.0604"
-           id="path158" />
-        <path
-           d="m 103.545,83.0691 -0.0605,-0.0605"
-           id="path160" />
-        <path
-           d="m 103.4845,83.0086 -0.0604,-0.121"
-           id="path162" />
-        <path
-           d="M 103.4241,82.8876 V 82.5248"
-           id="path164" />
-        <path
-           d="m 103.4241,82.5248 0.0604,-0.121"
-           id="path166" />
-        <path
-           d="m 103.4845,82.4038 0.0605,-0.0605"
-           id="path168" />
-        <path
-           d="m 103.545,82.3433 0.121,-0.0604"
-           id="path170" />
-        <path
-           d="m 103.666,82.2829 h 0.1814"
-           id="path172" />
-        <path
-           d="m 103.8474,82.2829 0.1209,0.0604"
-           id="path174" />
-        <path
-           d="m 103.9683,82.3433 0.0605,0.0605"
-           id="path176" />
-        <path
-           d="m 104.0288,82.4038 0.0605,0.121"
-           id="path178" />
-        <path
-           d="m 104.0893,82.5248 v 0.3628"
-           id="path180" />
-        <path
-           d="m 104.0893,82.8876 -0.0605,0.121"
-           id="path182" />
-        <path
-           d="m 104.0288,83.0086 -0.0605,0.0605"
-           id="path184" />
-        <path
-           d="m 103.9683,83.0691 -0.1209,0.0604"
-           id="path186" />
-        <path
-           d="M 103.8474,83.1295 H 103.666"
-           id="path188" />
-        <path
-           d="m 104.6335,83.1295 v -1.27"
-           id="path190" />
-        <path
-           d="m 104.7545,82.6457 0.3628,0.4838"
-           id="path192" />
-        <path
-           d="m 105.1173,82.2829 -0.4838,0.4838"
-           id="path194" />
-        <path
-           d="m 105.5407,81.8595 h 0.7862"
-           id="path196" />
-        <path
-           d="m 106.3269,81.8595 -0.4234,0.4838"
-           id="path198" />
-        <path
-           d="m 105.9035,82.3433 h 0.1815"
-           id="path200" />
-        <path
-           d="m 106.085,82.3433 0.1209,0.0605"
-           id="path202" />
-        <path
-           d="m 106.2059,82.4038 0.0605,0.0605"
-           id="path204" />
-        <path
-           d="m 106.2664,82.4643 0.0605,0.1209"
-           id="path206" />
-        <path
-           d="m 106.3269,82.5852 v 0.3024"
-           id="path208" />
-        <path
-           d="m 106.3269,82.8876 -0.0605,0.121"
-           id="path210" />
-        <path
-           d="m 106.2664,83.0086 -0.0605,0.0605"
-           id="path212" />
-        <path
-           d="m 106.2059,83.0691 -0.1209,0.0604"
-           id="path214" />
-        <path
-           d="m 106.085,83.1295 h -0.3629"
-           id="path216" />
-        <path
-           d="m 105.7221,83.1295 -0.1209,-0.0604"
-           id="path218" />
-        <path
-           d="m 105.6012,83.0691 -0.0605,-0.0605"
-           id="path220" />
-      </g>
-    </g>
+    <path
+       d="m 55.816797,17.2767 v -1.27"
+       id="path128"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+    <path
+       d="m 55.816797,22.3567 v 1.27"
+       id="path130"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
   </g>
   <g
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
@@ -791,14 +502,15 @@
     </g>
   </g>
   <g
-     style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-     id="g560"
-     transform="translate(-53.403203,-64.0033)">
-    <g
-       id="g464" />
+     id="g464"
+     transform="translate(-53.403203,-64.0033)"
+     style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+  <g
+     id="g9045">
     <g
        style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.254;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="g468">
+       id="g468"
+       transform="translate(-53.403203,-64.0033)">
       <rect
          x="90.424004"
          y="92.709999"
@@ -807,158 +519,25 @@
          rx="0.000000"
          id="rect466" />
     </g>
-    <g
-       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="g558">
-      <path
-         d="M 91.44,92.71 V 91.44"
-         id="path470" />
-      <path
-         d="m 91.44,97.79 v 1.27"
-         id="path472" />
-      <text
-         x="86.4907"
-         y="94.614998"
-         textLength="4.7993002"
-         font-size="1.6933px"
-         lengthAdjust="spacingAndGlyphs"
-         text-anchor="middle"
-         opacity="0"
-         id="text474">Rov2</text>
-      <g
-         class="stroked-text"
-         id="g556">
-        <desc
-           id="desc476">Rov2</desc>
-        <path
-           d="M 85.2207,94.5595 84.7974,93.9548"
-           id="path478" />
-        <path
-           d="m 84.495,94.5595 v -1.27"
-           id="path480" />
-        <path
-           d="m 84.495,93.2895 h 0.4838"
-           id="path482" />
-        <path
-           d="m 84.9788,93.2895 0.121,0.0605"
-           id="path484" />
-        <path
-           d="m 85.0998,93.35 0.0605,0.0605"
-           id="path486" />
-        <path
-           d="m 85.1603,93.4105 0.0604,0.1209"
-           id="path488" />
-        <path
-           d="m 85.2207,93.5314 v 0.1815"
-           id="path490" />
-        <path
-           d="m 85.2207,93.7129 -0.0604,0.1209"
-           id="path492" />
-        <path
-           d="m 85.1603,93.8338 -0.0605,0.0605"
-           id="path494" />
-        <path
-           d="m 85.0998,93.8943 -0.121,0.0605"
-           id="path496" />
-        <path
-           d="M 84.9788,93.9548 H 84.495"
-           id="path498" />
-        <path
-           d="m 85.9465,94.5595 -0.121,-0.0604"
-           id="path500" />
-        <path
-           d="M 85.8255,94.4991 85.765,94.4386"
-           id="path502" />
-        <path
-           d="m 85.765,94.4386 -0.0604,-0.121"
-           id="path504" />
-        <path
-           d="M 85.7046,94.3176 V 93.9548"
-           id="path506" />
-        <path
-           d="m 85.7046,93.9548 0.0604,-0.121"
-           id="path508" />
-        <path
-           d="m 85.765,93.8338 0.0605,-0.0605"
-           id="path510" />
-        <path
-           d="m 85.8255,93.7733 0.121,-0.0604"
-           id="path512" />
-        <path
-           d="m 85.9465,93.7129 h 0.1814"
-           id="path514" />
-        <path
-           d="m 86.1279,93.7129 0.1209,0.0604"
-           id="path516" />
-        <path
-           d="m 86.2488,93.7733 0.0605,0.0605"
-           id="path518" />
-        <path
-           d="m 86.3093,93.8338 0.0605,0.121"
-           id="path520" />
-        <path
-           d="m 86.3698,93.9548 v 0.3628"
-           id="path522" />
-        <path
-           d="m 86.3698,94.3176 -0.0605,0.121"
-           id="path524" />
-        <path
-           d="m 86.3093,94.4386 -0.0605,0.0605"
-           id="path526" />
-        <path
-           d="m 86.2488,94.4991 -0.1209,0.0604"
-           id="path528" />
-        <path
-           d="M 86.1279,94.5595 H 85.9465"
-           id="path530" />
-        <path
-           d="m 86.7931,93.7129 0.3024,0.8466"
-           id="path532" />
-        <path
-           d="m 87.0955,94.5595 0.3023,-0.8466"
-           id="path534" />
-        <path
-           d="M 87.8212,93.4105 87.8816,93.35"
-           id="path536" />
-        <path
-           d="m 87.8816,93.35 0.121,-0.0605"
-           id="path538" />
-        <path
-           d="M 88.0026,93.2895 H 88.305"
-           id="path540" />
-        <path
-           d="M 88.305,93.2895 88.4259,93.35"
-           id="path542" />
-        <path
-           d="m 88.4259,93.35 0.0605,0.0605"
-           id="path544" />
-        <path
-           d="m 88.4864,93.4105 0.0605,0.1209"
-           id="path546" />
-        <path
-           d="m 88.5469,93.5314 v 0.121"
-           id="path548" />
-        <path
-           d="m 88.5469,93.6524 -0.0605,0.1814"
-           id="path550" />
-        <path
-           d="m 88.4864,93.8338 -0.7257,0.7257"
-           id="path552" />
-        <path
-           d="m 87.7607,94.5595 h 0.7862"
-           id="path554" />
-      </g>
-    </g>
+    <path
+       d="m 38.036797,28.7067 v -1.27"
+       id="path470"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+    <path
+       d="m 38.036797,33.7867 v 1.27"
+       id="path472"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
   </g>
   <g
-     style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-     id="g640"
-     transform="translate(-53.403203,-64.0033)">
-    <g
-       id="g562" />
+     id="g562"
+     transform="translate(-53.403203,-64.0033)"
+     style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+  <g
+     id="g8877">
     <g
        style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.254;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="g566">
+       id="g566"
+       transform="translate(-53.403203,-64.0033)">
       <rect
          x="99.314003"
          y="92.709999"
@@ -967,121 +546,14 @@
          rx="0.000000"
          id="rect564" />
     </g>
-    <g
-       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="g638">
-      <path
-         d="M 100.33,92.71 V 91.44"
-         id="path568" />
-      <path
-         d="m 100.33,97.79 v 1.27"
-         id="path570" />
-      <text
-         x="95.380699"
-         y="94.614998"
-         textLength="4.7993002"
-         font-size="1.6933px"
-         lengthAdjust="spacingAndGlyphs"
-         text-anchor="middle"
-         opacity="0"
-         id="text572">Ruv2</text>
-      <g
-         class="stroked-text"
-         id="g636">
-        <desc
-           id="desc574">Ruv2</desc>
-        <path
-           d="M 94.1107,94.5595 93.6874,93.9548"
-           id="path576" />
-        <path
-           d="m 93.385,94.5595 v -1.27"
-           id="path578" />
-        <path
-           d="m 93.385,93.2895 h 0.4838"
-           id="path580" />
-        <path
-           d="m 93.8688,93.2895 0.121,0.0605"
-           id="path582" />
-        <path
-           d="m 93.9898,93.35 0.0605,0.0605"
-           id="path584" />
-        <path
-           d="m 94.0503,93.4105 0.0604,0.1209"
-           id="path586" />
-        <path
-           d="m 94.1107,93.5314 v 0.1815"
-           id="path588" />
-        <path
-           d="m 94.1107,93.7129 -0.0604,0.1209"
-           id="path590" />
-        <path
-           d="m 94.0503,93.8338 -0.0605,0.0605"
-           id="path592" />
-        <path
-           d="m 93.9898,93.8943 -0.121,0.0605"
-           id="path594" />
-        <path
-           d="M 93.8688,93.9548 H 93.385"
-           id="path596" />
-        <path
-           d="m 95.1993,93.7129 v 0.8466"
-           id="path598" />
-        <path
-           d="m 94.655,93.7129 v 0.6652"
-           id="path600" />
-        <path
-           d="m 94.655,94.3781 0.0605,0.121"
-           id="path602" />
-        <path
-           d="m 94.7155,94.4991 0.121,0.0604"
-           id="path604" />
-        <path
-           d="m 94.8365,94.5595 h 0.1814"
-           id="path606" />
-        <path
-           d="m 95.0179,94.5595 0.1209,-0.0604"
-           id="path608" />
-        <path
-           d="m 95.1388,94.4991 0.0605,-0.0605"
-           id="path610" />
-        <path
-           d="m 95.6831,93.7129 0.3024,0.8466"
-           id="path612" />
-        <path
-           d="m 95.9855,94.5595 0.3023,-0.8466"
-           id="path614" />
-        <path
-           d="M 96.7112,93.4105 96.7716,93.35"
-           id="path616" />
-        <path
-           d="m 96.7716,93.35 0.121,-0.0605"
-           id="path618" />
-        <path
-           d="M 96.8926,93.2895 H 97.195"
-           id="path620" />
-        <path
-           d="M 97.195,93.2895 97.3159,93.35"
-           id="path622" />
-        <path
-           d="m 97.3159,93.35 0.0605,0.0605"
-           id="path624" />
-        <path
-           d="m 97.3764,93.4105 0.0605,0.1209"
-           id="path626" />
-        <path
-           d="m 97.4369,93.5314 v 0.121"
-           id="path628" />
-        <path
-           d="m 97.4369,93.6524 -0.0605,0.1814"
-           id="path630" />
-        <path
-           d="m 97.3764,93.8338 -0.7257,0.7257"
-           id="path632" />
-        <path
-           d="m 96.6507,94.5595 h 0.7862"
-           id="path634" />
-      </g>
-    </g>
+    <path
+       d="m 46.926797,28.7067 v -1.27"
+       id="path568"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+    <path
+       d="m 46.926797,33.7867 v 1.27"
+       id="path570"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
   </g>
   <g
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
@@ -2044,14 +1516,15 @@
     </g>
   </g>
   <g
-     style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-     id="g1348"
-     transform="translate(-53.403203,-64.0033)">
-    <g
-       id="g1234" />
+     id="g1234"
+     transform="translate(-53.403203,-64.0033)"
+     style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+  <g
+     id="g9249">
     <g
        style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.254;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="g1238">
+       id="g1238"
+       transform="translate(-53.403203,-64.0033)">
       <rect
          x="81.533997"
          y="92.709999"
@@ -2060,176 +1533,26 @@
          rx="0.000000"
          id="rect1236" />
     </g>
-    <g
-       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="g1346">
-      <path
-         d="M 82.55,92.71 V 91.44"
-         id="path1240" />
-      <path
-         d="m 82.55,97.79 v 1.27"
-         id="path1242" />
-      <text
-         x="77.540199"
-         y="94.614998"
-         textLength="4.9203"
-         font-size="1.6933px"
-         lengthAdjust="spacingAndGlyphs"
-         text-anchor="middle"
-         opacity="0"
-         id="text1244">Roc2</text>
-      <g
-         class="stroked-text"
-         id="g1344">
-        <desc
-           id="desc1246">Roc2</desc>
-        <path
-           d="M 76.2097,94.5595 75.7864,93.9548"
-           id="path1248" />
-        <path
-           d="m 75.484,94.5595 v -1.27"
-           id="path1250" />
-        <path
-           d="m 75.484,93.2895 h 0.4838"
-           id="path1252" />
-        <path
-           d="m 75.9678,93.2895 0.121,0.0605"
-           id="path1254" />
-        <path
-           d="m 76.0888,93.35 0.0605,0.0605"
-           id="path1256" />
-        <path
-           d="m 76.1493,93.4105 0.0604,0.1209"
-           id="path1258" />
-        <path
-           d="m 76.2097,93.5314 v 0.1815"
-           id="path1260" />
-        <path
-           d="m 76.2097,93.7129 -0.0604,0.1209"
-           id="path1262" />
-        <path
-           d="m 76.1493,93.8338 -0.0605,0.0605"
-           id="path1264" />
-        <path
-           d="m 76.0888,93.8943 -0.121,0.0605"
-           id="path1266" />
-        <path
-           d="M 75.9678,93.9548 H 75.484"
-           id="path1268" />
-        <path
-           d="m 76.9355,94.5595 -0.121,-0.0604"
-           id="path1270" />
-        <path
-           d="M 76.8145,94.4991 76.754,94.4386"
-           id="path1272" />
-        <path
-           d="m 76.754,94.4386 -0.0604,-0.121"
-           id="path1274" />
-        <path
-           d="M 76.6936,94.3176 V 93.9548"
-           id="path1276" />
-        <path
-           d="m 76.6936,93.9548 0.0604,-0.121"
-           id="path1278" />
-        <path
-           d="m 76.754,93.8338 0.0605,-0.0605"
-           id="path1280" />
-        <path
-           d="m 76.8145,93.7733 0.121,-0.0604"
-           id="path1282" />
-        <path
-           d="m 76.9355,93.7129 h 0.1814"
-           id="path1284" />
-        <path
-           d="m 77.1169,93.7129 0.1209,0.0604"
-           id="path1286" />
-        <path
-           d="m 77.2378,93.7733 0.0605,0.0605"
-           id="path1288" />
-        <path
-           d="m 77.2983,93.8338 0.0605,0.121"
-           id="path1290" />
-        <path
-           d="m 77.3588,93.9548 v 0.3628"
-           id="path1292" />
-        <path
-           d="m 77.3588,94.3176 -0.0605,0.121"
-           id="path1294" />
-        <path
-           d="m 77.2983,94.4386 -0.0605,0.0605"
-           id="path1296" />
-        <path
-           d="m 77.2378,94.4991 -0.1209,0.0604"
-           id="path1298" />
-        <path
-           d="M 77.1169,94.5595 H 76.9355"
-           id="path1300" />
-        <path
-           d="m 78.4473,94.4991 -0.1209,0.0604"
-           id="path1302" />
-        <path
-           d="M 78.3264,94.5595 H 78.0845"
-           id="path1304" />
-        <path
-           d="m 78.0845,94.5595 -0.121,-0.0604"
-           id="path1306" />
-        <path
-           d="M 77.9635,94.4991 77.903,94.4386"
-           id="path1308" />
-        <path
-           d="m 77.903,94.4386 -0.0604,-0.121"
-           id="path1310" />
-        <path
-           d="M 77.8426,94.3176 V 93.9548"
-           id="path1312" />
-        <path
-           d="m 77.8426,93.9548 0.0604,-0.121"
-           id="path1314" />
-        <path
-           d="m 77.903,93.8338 0.0605,-0.0605"
-           id="path1316" />
-        <path
-           d="m 77.9635,93.7733 0.121,-0.0604"
-           id="path1318" />
-        <path
-           d="m 78.0845,93.7129 h 0.2419"
-           id="path1320" />
-        <path
-           d="m 78.3264,93.7129 0.1209,0.0604"
-           id="path1322" />
-        <path
-           d="M 78.9312,93.4105 78.9916,93.35"
-           id="path1324" />
-        <path
-           d="m 78.9916,93.35 0.121,-0.0605"
-           id="path1326" />
-        <path
-           d="M 79.1126,93.2895 H 79.415"
-           id="path1328" />
-        <path
-           d="M 79.415,93.2895 79.5359,93.35"
-           id="path1330" />
-        <path
-           d="m 79.5359,93.35 0.0605,0.0605"
-           id="path1332" />
-        <path
-           d="m 79.5964,93.4105 0.0605,0.1209"
-           id="path1334" />
-        <path
-           d="m 79.6569,93.5314 v 0.121"
-           id="path1336" />
-        <path
-           d="m 79.6569,93.6524 -0.0605,0.1814"
-           id="path1338" />
-        <path
-           d="m 79.5964,93.8338 -0.7257,0.7257"
-           id="path1340" />
-        <path
-           d="m 78.8707,94.5595 h 0.7862"
-           id="path1342" />
-      </g>
-    </g>
+    <path
+       d="m 29.146797,28.7067 v -1.27"
+       id="path1240"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+    <path
+       d="m 29.146797,33.7867 v 1.27"
+       id="path1242"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
   </g>
+  <text
+     x="77.540199"
+     y="94.614998"
+     textLength="4.9203"
+     font-size="1.6933px"
+     lengthAdjust="spacingAndGlyphs"
+     text-anchor="middle"
+     opacity="0"
+     id="text1244"
+     transform="translate(-53.403203,-64.0033)"
+     style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1">Roc2</text>
   <g
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
      id="g1422"
@@ -2814,14 +2137,15 @@
     </g>
   </g>
   <g
-     style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-     id="g1810"
-     transform="translate(-53.403203,-64.0033)">
-    <g
-       id="g1712" />
+     id="g1712"
+     transform="translate(-53.403203,-64.0033)"
+     style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+  <g
+     id="g4537">
     <g
        style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.254;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="g1716">
+       id="g1716"
+       transform="translate(-53.403203,-64.0033)">
       <rect
          x="108.204"
          y="92.709999"
@@ -2830,151 +2154,14 @@
          rx="0.000000"
          id="rect1714" />
     </g>
-    <g
-       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="g1808">
-      <path
-         d="M 109.22,92.71 V 91.44"
-         id="path1718" />
-      <path
-         d="m 109.22,97.79 v 1.27"
-         id="path1720" />
-      <text
-         x="104.2405"
-         y="94.614998"
-         textLength="4.8597999"
-         font-size="1.6933px"
-         lengthAdjust="spacingAndGlyphs"
-         text-anchor="middle"
-         opacity="0"
-         id="text1722">Rok2</text>
-      <g
-         class="stroked-text"
-         id="g1806">
-        <desc
-           id="desc1724">Rok2</desc>
-        <path
-           d="m 102.9402,94.5595 -0.4233,-0.6047"
-           id="path1726" />
-        <path
-           d="m 102.2145,94.5595 v -1.27"
-           id="path1728" />
-        <path
-           d="m 102.2145,93.2895 h 0.4838"
-           id="path1730" />
-        <path
-           d="m 102.6983,93.2895 0.121,0.0605"
-           id="path1732" />
-        <path
-           d="m 102.8193,93.35 0.0605,0.0605"
-           id="path1734" />
-        <path
-           d="m 102.8798,93.4105 0.0604,0.1209"
-           id="path1736" />
-        <path
-           d="m 102.9402,93.5314 v 0.1815"
-           id="path1738" />
-        <path
-           d="m 102.9402,93.7129 -0.0604,0.1209"
-           id="path1740" />
-        <path
-           d="m 102.8798,93.8338 -0.0605,0.0605"
-           id="path1742" />
-        <path
-           d="m 102.8193,93.8943 -0.121,0.0605"
-           id="path1744" />
-        <path
-           d="m 102.6983,93.9548 h -0.4838"
-           id="path1746" />
-        <path
-           d="m 103.666,94.5595 -0.121,-0.0604"
-           id="path1748" />
-        <path
-           d="m 103.545,94.4991 -0.0605,-0.0605"
-           id="path1750" />
-        <path
-           d="m 103.4845,94.4386 -0.0604,-0.121"
-           id="path1752" />
-        <path
-           d="M 103.4241,94.3176 V 93.9548"
-           id="path1754" />
-        <path
-           d="m 103.4241,93.9548 0.0604,-0.121"
-           id="path1756" />
-        <path
-           d="m 103.4845,93.8338 0.0605,-0.0605"
-           id="path1758" />
-        <path
-           d="m 103.545,93.7733 0.121,-0.0604"
-           id="path1760" />
-        <path
-           d="m 103.666,93.7129 h 0.1814"
-           id="path1762" />
-        <path
-           d="m 103.8474,93.7129 0.1209,0.0604"
-           id="path1764" />
-        <path
-           d="m 103.9683,93.7733 0.0605,0.0605"
-           id="path1766" />
-        <path
-           d="m 104.0288,93.8338 0.0605,0.121"
-           id="path1768" />
-        <path
-           d="m 104.0893,93.9548 v 0.3628"
-           id="path1770" />
-        <path
-           d="m 104.0893,94.3176 -0.0605,0.121"
-           id="path1772" />
-        <path
-           d="m 104.0288,94.4386 -0.0605,0.0605"
-           id="path1774" />
-        <path
-           d="m 103.9683,94.4991 -0.1209,0.0604"
-           id="path1776" />
-        <path
-           d="M 103.8474,94.5595 H 103.666"
-           id="path1778" />
-        <path
-           d="m 104.6335,94.5595 v -1.27"
-           id="path1780" />
-        <path
-           d="m 104.7545,94.0757 0.3628,0.4838"
-           id="path1782" />
-        <path
-           d="m 105.1173,93.7129 -0.4838,0.4838"
-           id="path1784" />
-        <path
-           d="M 105.6012,93.4105 105.6616,93.35"
-           id="path1786" />
-        <path
-           d="m 105.6616,93.35 0.121,-0.0605"
-           id="path1788" />
-        <path
-           d="m 105.7826,93.2895 h 0.3024"
-           id="path1790" />
-        <path
-           d="m 106.085,93.2895 0.1209,0.0605"
-           id="path1792" />
-        <path
-           d="m 106.2059,93.35 0.0605,0.0605"
-           id="path1794" />
-        <path
-           d="m 106.2664,93.4105 0.0605,0.1209"
-           id="path1796" />
-        <path
-           d="m 106.3269,93.5314 v 0.121"
-           id="path1798" />
-        <path
-           d="m 106.3269,93.6524 -0.0605,0.1814"
-           id="path1800" />
-        <path
-           d="m 106.2664,93.8338 -0.7257,0.7257"
-           id="path1802" />
-        <path
-           d="m 105.5407,94.5595 h 0.7862"
-           id="path1804" />
-      </g>
-    </g>
+    <path
+       d="m 55.816797,28.7067 v -1.27"
+       id="path1718"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+    <path
+       d="m 55.816797,33.7867 v 1.27"
+       id="path1720"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
   </g>
   <g
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
@@ -7105,14 +6292,15 @@
     </g>
   </g>
   <g
-     style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-     id="g4472"
-     transform="translate(-53.403203,-64.0033)">
-    <g
-       id="g4404" />
+     id="g4404"
+     transform="translate(-53.403203,-64.0033)"
+     style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+  <g
+     id="g8947">
     <g
        style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.254;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="g4408">
+       id="g4408"
+       transform="translate(-53.403203,-64.0033)">
       <rect
          x="99.314003"
          y="107.95"
@@ -7121,106 +6309,14 @@
          rx="0.000000"
          id="rect4406" />
     </g>
-    <g
-       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="g4470">
-      <path
-         d="m 100.33,107.95 v -1.27"
-         id="path4410" />
-      <path
-         d="m 100.33,113.03 v 1.27"
-         id="path4412" />
-      <text
-         x="95.380699"
-         y="109.855"
-         textLength="4.7993002"
-         font-size="1.6933px"
-         lengthAdjust="spacingAndGlyphs"
-         text-anchor="middle"
-         opacity="0"
-         id="text4414">Ruv1</text>
-      <g
-         class="stroked-text"
-         id="g4468">
-        <desc
-           id="desc4416">Ruv1</desc>
-        <path
-           d="m 94.1107,109.7995 -0.4233,-0.6047"
-           id="path4418" />
-        <path
-           d="m 93.385,109.7995 v -1.27"
-           id="path4420" />
-        <path
-           d="m 93.385,108.5295 h 0.4838"
-           id="path4422" />
-        <path
-           d="m 93.8688,108.5295 0.121,0.0605"
-           id="path4424" />
-        <path
-           d="m 93.9898,108.59 0.0605,0.0605"
-           id="path4426" />
-        <path
-           d="m 94.0503,108.6505 0.0604,0.1209"
-           id="path4428" />
-        <path
-           d="m 94.1107,108.7714 v 0.1815"
-           id="path4430" />
-        <path
-           d="m 94.1107,108.9529 -0.0604,0.1209"
-           id="path4432" />
-        <path
-           d="m 94.0503,109.0738 -0.0605,0.0605"
-           id="path4434" />
-        <path
-           d="m 93.9898,109.1343 -0.121,0.0605"
-           id="path4436" />
-        <path
-           d="M 93.8688,109.1948 H 93.385"
-           id="path4438" />
-        <path
-           d="m 95.1993,108.9529 v 0.8466"
-           id="path4440" />
-        <path
-           d="m 94.655,108.9529 v 0.6652"
-           id="path4442" />
-        <path
-           d="m 94.655,109.6181 0.0605,0.121"
-           id="path4444" />
-        <path
-           d="m 94.7155,109.7391 0.121,0.0604"
-           id="path4446" />
-        <path
-           d="m 94.8365,109.7995 h 0.1814"
-           id="path4448" />
-        <path
-           d="m 95.0179,109.7995 0.1209,-0.0604"
-           id="path4450" />
-        <path
-           d="m 95.1388,109.7391 0.0605,-0.0605"
-           id="path4452" />
-        <path
-           d="m 95.6831,108.9529 0.3024,0.8466"
-           id="path4454" />
-        <path
-           d="m 95.9855,109.7995 0.3023,-0.8466"
-           id="path4456" />
-        <path
-           d="M 97.4369,109.7995 H 96.7112"
-           id="path4458" />
-        <path
-           d="m 97.074,109.7995 v -1.27"
-           id="path4460" />
-        <path
-           d="m 97.074,108.5295 -0.1209,0.1815"
-           id="path4462" />
-        <path
-           d="m 96.9531,108.711 -0.121,0.1209"
-           id="path4464" />
-        <path
-           d="m 96.8321,108.8319 -0.1209,0.0605"
-           id="path4466" />
-      </g>
-    </g>
+    <path
+       d="m 46.926797,43.9467 v -1.27"
+       id="path4410"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+    <path
+       d="m 46.926797,49.0267 v 1.27"
+       id="path4412"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
   </g>
   <g
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
@@ -7463,14 +6559,15 @@
     </g>
   </g>
   <g
-     style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-     id="g4708"
-     transform="translate(-53.403203,-64.0033)">
-    <g
-       id="g4622" />
+     id="g4622"
+     transform="translate(-53.403203,-64.0033)"
+     style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+  <g
+     id="g9133">
     <g
        style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.254;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="g4626">
+       id="g4626"
+       transform="translate(-53.403203,-64.0033)">
       <rect
          x="90.424004"
          y="107.95"
@@ -7479,133 +6576,14 @@
          rx="0.000000"
          id="rect4624" />
     </g>
-    <g
-       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="g4706">
-      <path
-         d="m 91.44,107.95 v -1.27"
-         id="path4628" />
-      <path
-         d="m 91.44,113.03 v 1.27"
-         id="path4630" />
-      <text
-         x="86.4907"
-         y="109.855"
-         textLength="4.7993002"
-         font-size="1.6933px"
-         lengthAdjust="spacingAndGlyphs"
-         text-anchor="middle"
-         opacity="0"
-         id="text4632">Rov1</text>
-      <g
-         class="stroked-text"
-         id="g4704">
-        <desc
-           id="desc4634">Rov1</desc>
-        <path
-           d="m 85.2207,109.7995 -0.4233,-0.6047"
-           id="path4636" />
-        <path
-           d="m 84.495,109.7995 v -1.27"
-           id="path4638" />
-        <path
-           d="m 84.495,108.5295 h 0.4838"
-           id="path4640" />
-        <path
-           d="m 84.9788,108.5295 0.121,0.0605"
-           id="path4642" />
-        <path
-           d="m 85.0998,108.59 0.0605,0.0605"
-           id="path4644" />
-        <path
-           d="m 85.1603,108.6505 0.0604,0.1209"
-           id="path4646" />
-        <path
-           d="m 85.2207,108.7714 v 0.1815"
-           id="path4648" />
-        <path
-           d="m 85.2207,108.9529 -0.0604,0.1209"
-           id="path4650" />
-        <path
-           d="m 85.1603,109.0738 -0.0605,0.0605"
-           id="path4652" />
-        <path
-           d="m 85.0998,109.1343 -0.121,0.0605"
-           id="path4654" />
-        <path
-           d="M 84.9788,109.1948 H 84.495"
-           id="path4656" />
-        <path
-           d="m 85.9465,109.7995 -0.121,-0.0604"
-           id="path4658" />
-        <path
-           d="M 85.8255,109.7391 85.765,109.6786"
-           id="path4660" />
-        <path
-           d="m 85.765,109.6786 -0.0604,-0.121"
-           id="path4662" />
-        <path
-           d="m 85.7046,109.5576 v -0.3628"
-           id="path4664" />
-        <path
-           d="m 85.7046,109.1948 0.0604,-0.121"
-           id="path4666" />
-        <path
-           d="m 85.765,109.0738 0.0605,-0.0605"
-           id="path4668" />
-        <path
-           d="m 85.8255,109.0133 0.121,-0.0604"
-           id="path4670" />
-        <path
-           d="m 85.9465,108.9529 h 0.1814"
-           id="path4672" />
-        <path
-           d="m 86.1279,108.9529 0.1209,0.0604"
-           id="path4674" />
-        <path
-           d="m 86.2488,109.0133 0.0605,0.0605"
-           id="path4676" />
-        <path
-           d="m 86.3093,109.0738 0.0605,0.121"
-           id="path4678" />
-        <path
-           d="m 86.3698,109.1948 v 0.3628"
-           id="path4680" />
-        <path
-           d="m 86.3698,109.5576 -0.0605,0.121"
-           id="path4682" />
-        <path
-           d="m 86.3093,109.6786 -0.0605,0.0605"
-           id="path4684" />
-        <path
-           d="m 86.2488,109.7391 -0.1209,0.0604"
-           id="path4686" />
-        <path
-           d="M 86.1279,109.7995 H 85.9465"
-           id="path4688" />
-        <path
-           d="m 86.7931,108.9529 0.3024,0.8466"
-           id="path4690" />
-        <path
-           d="m 87.0955,109.7995 0.3023,-0.8466"
-           id="path4692" />
-        <path
-           d="M 88.5469,109.7995 H 87.8212"
-           id="path4694" />
-        <path
-           d="m 88.184,109.7995 v -1.27"
-           id="path4696" />
-        <path
-           d="m 88.184,108.5295 -0.1209,0.1815"
-           id="path4698" />
-        <path
-           d="m 88.0631,108.711 -0.121,0.1209"
-           id="path4700" />
-        <path
-           d="m 87.9421,108.8319 -0.1209,0.0605"
-           id="path4702" />
-      </g>
-    </g>
+    <path
+       d="m 38.036797,43.9467 v -1.27"
+       id="path4628"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+    <path
+       d="m 38.036797,49.0267 v 1.27"
+       id="path4630"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
   </g>
   <g
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
@@ -8146,14 +7124,15 @@
     </g>
   </g>
   <g
-     style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-     id="g5130"
-     transform="translate(-53.403203,-64.0033)">
-    <g
-       id="g5042" />
+     id="g5042"
+     transform="translate(-53.403203,-64.0033)"
+     style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+  <g
+     id="g4627">
     <g
        style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.254;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="g5046">
+       id="g5046"
+       transform="translate(-53.403203,-64.0033)">
       <rect
          x="108.204"
          y="107.95"
@@ -8162,136 +7141,14 @@
          rx="0.000000"
          id="rect5044" />
     </g>
-    <g
-       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
-       id="g5128">
-      <path
-         d="m 109.22,107.95 v -1.27"
-         id="path5048" />
-      <path
-         d="m 109.22,113.03 v 1.27"
-         id="path5050" />
-      <text
-         x="104.2405"
-         y="109.855"
-         textLength="4.8597999"
-         font-size="1.6933px"
-         lengthAdjust="spacingAndGlyphs"
-         text-anchor="middle"
-         opacity="0"
-         id="text5052">Rok1</text>
-      <g
-         class="stroked-text"
-         id="g5126">
-        <desc
-           id="desc5054">Rok1</desc>
-        <path
-           d="m 102.9402,109.7995 -0.4233,-0.6047"
-           id="path5056" />
-        <path
-           d="m 102.2145,109.7995 v -1.27"
-           id="path5058" />
-        <path
-           d="m 102.2145,108.5295 h 0.4838"
-           id="path5060" />
-        <path
-           d="m 102.6983,108.5295 0.121,0.0605"
-           id="path5062" />
-        <path
-           d="m 102.8193,108.59 0.0605,0.0605"
-           id="path5064" />
-        <path
-           d="m 102.8798,108.6505 0.0604,0.1209"
-           id="path5066" />
-        <path
-           d="m 102.9402,108.7714 v 0.1815"
-           id="path5068" />
-        <path
-           d="m 102.9402,108.9529 -0.0604,0.1209"
-           id="path5070" />
-        <path
-           d="m 102.8798,109.0738 -0.0605,0.0605"
-           id="path5072" />
-        <path
-           d="m 102.8193,109.1343 -0.121,0.0605"
-           id="path5074" />
-        <path
-           d="m 102.6983,109.1948 h -0.4838"
-           id="path5076" />
-        <path
-           d="m 103.666,109.7995 -0.121,-0.0604"
-           id="path5078" />
-        <path
-           d="m 103.545,109.7391 -0.0605,-0.0605"
-           id="path5080" />
-        <path
-           d="m 103.4845,109.6786 -0.0604,-0.121"
-           id="path5082" />
-        <path
-           d="m 103.4241,109.5576 v -0.3628"
-           id="path5084" />
-        <path
-           d="m 103.4241,109.1948 0.0604,-0.121"
-           id="path5086" />
-        <path
-           d="m 103.4845,109.0738 0.0605,-0.0605"
-           id="path5088" />
-        <path
-           d="m 103.545,109.0133 0.121,-0.0604"
-           id="path5090" />
-        <path
-           d="m 103.666,108.9529 h 0.1814"
-           id="path5092" />
-        <path
-           d="m 103.8474,108.9529 0.1209,0.0604"
-           id="path5094" />
-        <path
-           d="m 103.9683,109.0133 0.0605,0.0605"
-           id="path5096" />
-        <path
-           d="m 104.0288,109.0738 0.0605,0.121"
-           id="path5098" />
-        <path
-           d="m 104.0893,109.1948 v 0.3628"
-           id="path5100" />
-        <path
-           d="m 104.0893,109.5576 -0.0605,0.121"
-           id="path5102" />
-        <path
-           d="m 104.0288,109.6786 -0.0605,0.0605"
-           id="path5104" />
-        <path
-           d="m 103.9683,109.7391 -0.1209,0.0604"
-           id="path5106" />
-        <path
-           d="M 103.8474,109.7995 H 103.666"
-           id="path5108" />
-        <path
-           d="m 104.6335,109.7995 v -1.27"
-           id="path5110" />
-        <path
-           d="m 104.7545,109.3157 0.3628,0.4838"
-           id="path5112" />
-        <path
-           d="m 105.1173,108.9529 -0.4838,0.4838"
-           id="path5114" />
-        <path
-           d="m 106.3269,109.7995 h -0.7257"
-           id="path5116" />
-        <path
-           d="m 105.964,109.7995 v -1.27"
-           id="path5118" />
-        <path
-           d="m 105.964,108.5295 -0.1209,0.1815"
-           id="path5120" />
-        <path
-           d="m 105.8431,108.711 -0.121,0.1209"
-           id="path5122" />
-        <path
-           d="m 105.7221,108.8319 -0.1209,0.0605"
-           id="path5124" />
-      </g>
-    </g>
+    <path
+       d="m 55.816797,43.9467 v -1.27"
+       id="path5048"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+    <path
+       d="m 55.816797,49.0267 v 1.27"
+       id="path5050"
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1524;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
   </g>
   <g
      style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.1588;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
@@ -13399,4 +12256,208 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <!-- Etiqueta de prueba simple -->
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#000000;stroke-width:0.264583"
+     x="48.444679"
+     y="19.23012"
+     id="text4377"><tspan
+       sodipodi:role="line"
+       id="tspan4375"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+       x="48.444679"
+       y="19.23012">Rok3</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#000000;stroke-width:0.264583"
+     x="48.4445"
+     y="30.64267"
+     id="text4292"><tspan
+       sodipodi:role="line"
+       id="tspan4290"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+       x="48.4445"
+       y="30.64267">Rok2</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#000000;stroke-width:0.264583"
+     x="48.444679"
+     y="45.98867"
+     id="text4398"><tspan
+       sodipodi:role="line"
+       id="tspan4396"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+       x="48.444679"
+       y="45.98867">Rok1</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#000000;stroke-width:0.264583"
+     x="39.748501"
+     y="30.566469"
+     id="text4402"><tspan
+       sodipodi:role="line"
+       id="tspan4400"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+       x="39.748501"
+       y="30.566469">Ruv2</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#000000;stroke-width:0.264583"
+     x="39.748501"
+     y="45.891304"
+     id="text4406"><tspan
+       sodipodi:role="line"
+       id="tspan4404"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+       x="39.748501"
+       y="45.891304">Ruv1</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#000000;stroke-width:0.264583"
+     x="30.855499"
+     y="30.566469"
+     id="text4410"><tspan
+       sodipodi:role="line"
+       id="tspan4408"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+       x="30.855499"
+       y="30.566469">Rov2</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#000000;stroke-width:0.264583"
+     x="30.855499"
+     y="45.891304"
+     id="text4416"><tspan
+       sodipodi:role="line"
+       id="tspan4414"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+       x="30.855499"
+       y="45.891304">Rov1</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#000000;stroke-width:0.264583"
+     x="21.859657"
+     y="30.566469"
+     id="text4420"><tspan
+       sodipodi:role="line"
+       id="tspan4418"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+       x="21.859657"
+       y="30.566469">Roc2</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#000000;stroke-width:0.264583"
+     x="21.859499"
+     y="45.891304"
+     id="text4424"><tspan
+       sodipodi:role="line"
+       id="tspan4422"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+       x="21.859499"
+       y="45.891304">Roc1</tspan></text>
+  <!-- Etiquetas dinámicas para valores de resistencias -->
+  <!-- Roc1 -->
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:1.76388889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#0066cc;stroke-width:0.264583"
+     x="21.859499"
+     y="51.399651"
+     id="Roc1-value">     <tspan
+   id="tspan-Roc1-value"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583;font-size:1.76388889px"
+   x="21.859499"
+   y="51.399651">-</tspan></text>
+  <!-- Roc2 -->
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:1.76389px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#0066cc;stroke-width:0.264583"
+     x="21.859657"
+     y="36.099651"
+     id="Roc2-value">     <tspan
+   id="tspan-Roc2-value"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:1.76389px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+   x="21.859657"
+   y="36.099651">-</tspan></text>
+  <!-- Rov1 -->
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:1.76388889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#0066cc;stroke-width:0.264583"
+     x="30.855499"
+     y="51.399651"
+     id="Rov1-value"><tspan
+   id="tspan4044"
+   style="font-size:1.76388889px"> </tspan>    <tspan
+   id="tspan-Rov1-value"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583;font-size:1.76388889px"
+   x="30.855499"
+   y="51.399651">-</tspan></text>
+  <!-- Rov2 -->
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:1.76389px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#0066cc"
+     x="30.855499"
+     y="36.099651"
+     id="Rov2-value">     <tspan
+   id="tspan-Rov2-value"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:1.76389px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'"
+   x="30.855499"
+   y="36.099651">-</tspan></text>
+  <!-- Ruv1 -->
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:1.76388889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#0066cc;stroke-width:0.264583"
+     x="39.748501"
+     y="51.399651"
+     id="Ruv1-value">     <tspan
+   id="tspan-Ruv1-value"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583;font-size:1.76388889px"
+   x="39.748501"
+   y="51.399651">-</tspan></text>
+  <!-- Ruv2 -->
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:1.76388889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#0066cc;stroke-width:0.264583"
+     x="39.748501"
+     y="36.099651"
+     id="Ruv2-value">     <tspan
+   id="tspan-Ruv2-value"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583;font-size:1.76388889px"
+   x="39.748501"
+   y="36.099651">-</tspan></text>
+  <!-- Rok1 -->
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#0066cc;stroke-width:0.264583"
+     x="48.444679"
+     y="51.399651"
+     id="Rok1-value"><tspan
+   style="font-size:1.76389px"
+   id="tspan4048">  </tspan>   <tspan
+   id="tspan-Rok1-value"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+   x="48.444679"
+   y="51.399651">-</tspan></text>
+  <!-- Rok2 -->
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:1.76388889px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#0066cc;stroke-width:0.264583"
+     x="48.444679"
+     y="36.099651"
+     id="Rok2-value">     <tspan
+   id="tspan-Rok2-value"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583;font-size:1.76388889px"
+   x="48.444679"
+   y="36.099651">-</tspan></text>
+  <!-- Rok3 -->
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#0066cc;stroke-width:0.264583"
+     x="48.444679"
+     y="24.599653"
+     id="Rok3-value">     <tspan
+   id="tspan-Rok3-value"
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.11667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+   x="48.444679"
+   y="24.599653">-</tspan></text>
 </svg>
