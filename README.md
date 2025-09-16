@@ -1,6 +1,6 @@
 # BQ25504 Calculator
 
-A professional web calculator for configuring BQ25504 chip resistors, built with HTML, CSS and vanilla JavaScript.
+A web calculator for configuring BQ25504 chip resistors, built with HTML, CSS and vanilla JavaScript.
 
 ## Features
 
