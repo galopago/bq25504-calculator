@@ -2,7 +2,7 @@
 const CONSTANTS = {
     VBAT_OV_MIN: 2.5,
     VBAT_OV_MAX: 5.25,
-    VBAT_UV_MIN: 2.5,
+    VBAT_UV_MIN: 2.2,
     ROV_TOTAL: 10e6,  // 10 MΩ
     RUV_TOTAL: 10e6,  // 10 MΩ
     ROK_TOTAL: 10e6,  // 10 MΩ

@@ -32,7 +32,7 @@
       "purpose": "Ultra-low power boost converter with battery management",
       "key_parameters": {
         "vbat_ov_range": "2.5V - 5.25V",
-        "vbat_uv_range": "2.5V - 5.25V", 
+        "vbat_uv_range": "2.2V - 5.25V", 
         "mpp_range": "50% - 100%",
         "internal_vref": "1.25V"
       }
@@ -141,14 +141,14 @@
         {
           "id": "vbat_uv", 
           "title": "Battery Minimum Voltage (VBAT_UV)",
-          "description": "RUV1 + RUV2 = 10 MΩ | Minimum: 2.5V",
+          "description": "RUV1 + RUV2 = 10 MΩ | Minimum: 2.2V",
           "input": {
             "id": "vbat_uv",
             "type": "number", 
             "step": 0.1,
-            "min": 2.5,
+            "min": 2.2,
             "max": 5.25,
-            "placeholder": "2.5"
+            "placeholder": "2.2"
           },
           "outputs": ["ruv1_result", "ruv2_result"]
         },
@@ -247,7 +247,7 @@
     ],
     "validation_rules": {
       "vbat_ov": "2.5V <= value <= 5.25V",
-      "vbat_uv": "2.5V <= value <= 5.25V",
+      "vbat_uv": "2.2V <= value <= 5.25V",
       "vbat_ok_prog": "2.5V <= value <= 5.25V",
       "vbat_ok_hyst": "vbat_ok_prog + 0.1V <= value <= 5.25V",
       "mpp_threshold": "50 <= value <= 100"

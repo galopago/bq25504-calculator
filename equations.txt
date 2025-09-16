@@ -18,4 +18,4 @@ MPPT = ROC1 / (ROC1+ROC2)
 
 // Restrictions
 VBAT_UV < VBAT_OK_PROG < VBAT_OK_HYST < VBAT_OV
-VBAT Battery voltage range 2.5 - 5.25 V
+VBAT Battery voltage range 2.2 - 5.25 V

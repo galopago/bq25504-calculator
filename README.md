@@ -30,7 +30,7 @@ Click any link above to open the calculator directly in your browser. No install
 1. **Open any of the links above**
 2. **Select battery type** - Choose from presets (Li-ion, LiFePO, NiMH 2x) or Custom
 3. **Configure VBAT_OV** - Maximum battery voltage (2.5V - 5.25V)
-4. **Configure VBAT_UV** - Minimum battery voltage (2.5V - 5.25V)
+4. **Configure VBAT_UV** - Minimum battery voltage (2.2V - 5.25V)
 5. **Configure Battery OK** - Battery OK thresholds and hysteresis
 6. **Configure MPPT** - Maximum power point percentage (50% - 100%)
 7. **See the resistor values** calculated automatically
@@ -100,7 +100,7 @@ This specification file serves as a complete reference for AI-assisted developme
 ## Calculated Parameters
 
 - **VBAT_OV**: ROV1 + ROV2 = 10 MΩ (2.5V - 5.25V)
-- **VBAT_UV**: RUV1 + RUV2 = 10 MΩ (2.5V - 5.25V)  
+- **VBAT_UV**: RUV1 + RUV2 = 10 MΩ (2.2V - 5.25V)  
 - **Battery OK**: ROK1 + ROK2 + ROK3 = 10 MΩ
 - **MPPT**: ROC1 + ROC2 = 20 MΩ (50% - 100%)
 
