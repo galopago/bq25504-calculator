@@ -41,7 +41,7 @@ The calculator includes preset configurations for common battery types:
 
 - **Li-ion Single Cell**: OV=4.2V, VBAT_OK_HYST=3.7V, VBAT_OK=3.3V, UV=3.0V
 - **LiFePO Single Cell**: OV=3.5V, VBAT_OK_HYST=3.2V, VBAT_OK=3.0V, UV=2.5V
-- **NiMH 2x Cells**: OV=2.8V, VBAT_OK_HYST=2.4V, VBAT_OK=2.0V, UV=1.8V
+- **NiMH 2x Cells**: OV=2.8V, VBAT_OK_HYST=2.4V, VBAT_OK=2.25V, UV=2.2V
 - **Custom**: Enter your own voltage values manually
 
 ## Keyboard Shortcuts

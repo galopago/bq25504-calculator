@@ -44,8 +44,8 @@ const BATTERY_PRESETS = {
         description: '2-cell pack',
         voltages: {
             vbat_ov: 2.8,
-            vbat_uv: 1.8,
-            vbat_ok_prog: 2.0,
+            vbat_uv: 2.2,
+            vbat_ok_prog: 2.25,
             vbat_ok_hyst: 2.4
         }
     }
