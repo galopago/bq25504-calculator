@@ -242,6 +242,9 @@ function displayResistance(elementId, resistance) {
     if (resistance < 0) {
         element.textContent = 'Error';
         element.style.color = '#e53e3e';
+        // Update SVG with error state
+        const resistanceType = elementId.replace('_result', '');
+        updateSVGResistance(resistanceType, null);
         return;
     }
     
@@ -257,6 +260,10 @@ function displayResistance(elementId, resistance) {
     
     element.textContent = formattedValue;
     element.style.color = '#38b2ac';
+    
+    // Update corresponding SVG value
+    const resistanceType = elementId.replace('_result', '');
+    updateSVGResistance(resistanceType, resistance);
 }
 
 // Function to clear results
@@ -265,6 +272,10 @@ function clearResults(elementIds) {
         const element = document.getElementById(id);
         element.textContent = '-';
         element.style.color = '#a0aec0';
+        
+        // Clear corresponding SVG value
+        const resistanceType = id.replace('_result', '');
+        updateSVGResistance(resistanceType, null);
     });
 }
 
@@ -363,3 +374,146 @@ function exportResults() {
     console.log('BQ25504 Results:', results);
     return results;
 }
+
+// SVG Value Injection Functions
+const SVG_RESISTANCE_MAP = {
+    'rov1': 'tspan-Rov1-value',
+    'rov2': 'tspan-Rov2-value',
+    'ruv1': 'tspan-Ruv1-value',
+    'ruv2': 'tspan-Ruv2-value',
+    'rok1': 'tspan-Rok1-value',
+    'rok2': 'tspan-Rok2-value',
+    'rok3': 'tspan-Rok3-value',
+    'roc1': 'tspan-Roc1-value',
+    'roc2': 'tspan-Roc2-value'
+};
+
+/**
+ * Format resistance value in scientific notation with 2 decimals and appropriate unit
+ * @param {number} resistance - Resistance value in ohms
+ * @returns {string} Formatted resistance string
+ */
+function formatResistanceForSVG(resistance) {
+    if (!resistance || isNaN(resistance) || resistance <= 0) {
+        return '-';
+    }
+    
+    if (resistance >= 1e6) {
+        return (resistance / 1e6).toFixed(2) + 'MΩ';
+    } else if (resistance >= 1e3) {
+        return (resistance / 1e3).toFixed(2) + 'kΩ';
+    } else {
+        return resistance.toFixed(2) + 'Ω';
+    }
+}
+
+/**
+ * Update SVG resistance values in real-time
+ * @param {string} resistanceType - Type of resistance (rov1, rov2, etc.)
+ * @param {number} value - Resistance value in ohms
+ */
+function updateSVGResistance(resistanceType, value) {
+    const tspanId = SVG_RESISTANCE_MAP[resistanceType];
+    if (!tspanId) return;
+    
+    const tspanElement = document.getElementById(tspanId);
+    if (tspanElement) {
+        tspanElement.textContent = formatResistanceForSVG(value);
+    }
+}
+
+/**
+ * Update all SVG resistance values based on current calculations
+ */
+function updateAllSVGResistances() {
+    // Get current resistance values from result elements
+    const resistanceValues = {
+        'rov1': getResistanceValue('rov1_result'),
+        'rov2': getResistanceValue('rov2_result'),
+        'ruv1': getResistanceValue('ruv1_result'),
+        'ruv2': getResistanceValue('ruv2_result'),
+        'rok1': getResistanceValue('rok1_result'),
+        'rok2': getResistanceValue('rok2_result'),
+        'rok3': getResistanceValue('rok3_result'),
+        'roc1': getResistanceValue('roc1_result'),
+        'roc2': getResistanceValue('roc2_result')
+    };
+    
+    // Update each resistance in SVG
+    Object.entries(resistanceValues).forEach(([type, value]) => {
+        updateSVGResistance(type, value);
+    });
+}
+
+/**
+ * Extract numeric resistance value from result element
+ * @param {string} elementId - ID of the result element
+ * @returns {number} Numeric resistance value in ohms
+ */
+function getResistanceValue(elementId) {
+    const element = document.getElementById(elementId);
+    if (!element || element.textContent === '-') {
+        return null;
+    }
+    
+    const text = element.textContent;
+    const match = text.match(/([\d.]+)\s*([Mk]?Ω)/);
+    if (!match) return null;
+    
+    const value = parseFloat(match[1]);
+    const unit = match[2];
+    
+    switch (unit) {
+        case 'MΩ':
+            return value * 1e6;
+        case 'kΩ':
+            return value * 1e3;
+        case 'Ω':
+        default:
+            return value;
+    }
+}
+
+/**
+ * Clear all SVG resistance values (show dashes)
+ */
+function clearAllSVGResistances() {
+    Object.values(SVG_RESISTANCE_MAP).forEach(tspanId => {
+        const tspanElement = document.getElementById(tspanId);
+        if (tspanElement) {
+            tspanElement.textContent = '-';
+        }
+    });
+}
+
+/**
+ * Load SVG dynamically and make it manipulable
+ */
+async function loadSVGDynamically() {
+    try {
+        const response = await fetch('bq25504.svg');
+        const svgText = await response.text();
+        const svgContainer = document.getElementById('svg-container');
+        
+        if (svgContainer) {
+            svgContainer.innerHTML = svgText;
+            
+            // Initialize SVG with dashes
+            clearAllSVGResistances();
+            
+            console.log('SVG loaded successfully and ready for dynamic updates');
+        }
+    } catch (error) {
+        console.error('Error loading SVG:', error);
+        // Fallback to image if SVG loading fails
+        const svgContainer = document.getElementById('svg-container');
+        if (svgContainer) {
+            svgContainer.innerHTML = '<img src="bq25504.svg" alt="BQ25504 Schematic Diagram" style="max-width: 100%; height: auto;">';
+        }
+    }
+}
+
+// Load SVG when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    loadSVGDynamically();
+});

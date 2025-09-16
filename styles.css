@@ -72,12 +72,29 @@ header p {
     height: auto;
     width: 100%;
     max-height: 600px;
-    object-fit: contain;
     transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .schematic-svg:hover {
     transform: scale(1.02);
+}
+
+.schematic-svg svg {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    max-height: 600px;
+}
+
+.schematic-svg img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    max-height: 600px;
+    object-fit: contain;
 }
 
 main {

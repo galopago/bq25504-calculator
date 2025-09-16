@@ -2,7 +2,7 @@
   "project_metadata": {
     "name": "BQ25504 Calculator",
     "description": "Web calculator for configuring BQ25504 chip resistors with battery presets",
-    "version": "2.1.0",
+    "version": "2.2.0",
     "created_by_ai": {
       "model": "Claude Sonnet 4",
       "training_date": "April 2024",
@@ -14,17 +14,18 @@
   
   "project_overview": {
     "type": "Web Application",
-    "technology_stack": ["HTML5", "CSS3", "Vanilla JavaScript ES6+"],
+    "technology_stack": ["HTML5", "CSS3", "Vanilla JavaScript ES6+", "SVG"],
     "target_audience": "Electronics engineers, embedded systems developers, power management designers",
     "main_functionality": "Calculate resistor values for BQ25504 energy harvesting IC configuration",
     "key_features": [
       "Battery type presets (Li-ion, LiFePO, NiMH)",
+      "Dynamic SVG schematic with real-time resistor values",
       "Real-time resistor calculations",
       "Responsive mobile-first design",
       "Input validation and range checking",
       "Modern UI with animations",
       "Improved placeholder styling for better UX",
-      "Updated SVG schematic diagram"
+      "Interactive BQ25504 diagram with live updates"
     ]
   },
 
@@ -110,8 +111,26 @@
       },
       "schematic_section": {
         "title": "BQ25504 Schematic",
-        "image": "bq25504.svg",
-        "description": "Visual reference of the chip configuration"
+        "type": "dynamic_svg",
+        "file": "bq25504.svg",
+        "description": "Interactive schematic diagram with real-time resistor value injection",
+        "dynamic_features": {
+          "real_time_updates": "Resistor values update instantly with calculations",
+          "scientific_notation": "Values displayed with 2 decimal places and units (MΩ, kΩ, Ω)",
+          "visual_feedback": "Invalid values show as '-' on diagram",
+          "responsive_scaling": "SVG scales perfectly on all screen sizes"
+        },
+        "resistance_mapping": {
+          "rov1": "tspan-Rov1-value",
+          "rov2": "tspan-Rov2-value", 
+          "ruv1": "tspan-Ruv1-value",
+          "ruv2": "tspan-Ruv2-value",
+          "rok1": "tspan-Rok1-value",
+          "rok2": "tspan-Rok2-value",
+          "rok3": "tspan-Rok3-value",
+          "roc1": "tspan-Roc1-value",
+          "roc2": "tspan-Roc2-value"
+        }
       },
       "battery_presets": {
         "title": "Battery Presets",
@@ -251,7 +270,12 @@
       "populateVoltageInputs() - Auto-fill inputs from presets",
       "displayResistance() - Format and display resistor values",
       "isValidVoltage() - Validate input ranges",
-      "clearResults() - Clear invalid results"
+      "clearResults() - Clear invalid results",
+      "loadSVGDynamically() - Load SVG as inline content for manipulation",
+      "updateSVGResistance() - Update individual resistor value in SVG",
+      "updateAllSVGResistances() - Update all resistor values in SVG",
+      "formatResistanceForSVG() - Format values with scientific notation",
+      "clearAllSVGResistances() - Clear all SVG values (show dashes)"
     ],
     "validation_rules": {
       "vbat_ov": "2.5V <= value <= 5.25V",
@@ -264,7 +288,9 @@
       "Input change triggers immediate recalculation",
       "Visual feedback for invalid inputs",
       "Automatic preset population on selection",
-      "Responsive result formatting (MΩ, kΩ, Ω)"
+      "Responsive result formatting (MΩ, kΩ, Ω)",
+      "Dynamic SVG updates with live resistor values",
+      "Scientific notation formatting in schematic diagram"
     ]
   },
 
@@ -314,10 +340,10 @@
     "browser_support": "Modern browsers with ES6+ support",
     "dependencies": "None (vanilla HTML/CSS/JS)",
     "file_structure": [
-      "index.html - Main application",
-      "styles.css - All styling including placeholder improvements",
-      "script.js - All functionality", 
-      "bq25504.svg - Updated schematic diagram",
+      "index.html - Main application with dynamic SVG container",
+      "styles.css - All styling including placeholder improvements and SVG styling",
+      "script.js - All functionality including SVG injection functions", 
+      "bq25504.svg - Interactive schematic diagram with tspan elements for values",
       "bq25504-calculator-specification.json - AI specification file",
       "README.md - Documentation"
     ]
@@ -330,9 +356,11 @@
     "extensibility": "Easy to add new battery types or modify calculations",
     "maintenance": "Clean, well-documented code for easy updates",
     "recent_updates": {
+      "version_2.2.0": "Added dynamic SVG schematic with real-time resistor value injection",
       "version_2.1.0": "Improved placeholder styling for better user experience and updated SVG schematic",
+      "svg_dynamic_features": "SVG now displays live resistor values with scientific notation, updates in real-time with calculations",
       "placeholder_improvements": "Placeholder text now uses subtle color (#a0aec0) with 70% opacity to reduce confusion with user input",
-      "svg_update": "Updated schematic diagram with improved visual clarity"
+      "interactive_diagram": "BQ25504 schematic diagram is now interactive with 9 dynamic resistance value displays"
     }
   }
 }

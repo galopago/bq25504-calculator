@@ -5,6 +5,7 @@ A web calculator for configuring BQ25504 chip resistors, built with HTML, CSS an
 ## Features
 
 - **Battery presets** - Quick setup for Li-ion, LiFePO, and NiMH batteries
+- **Dynamic SVG schematic** - Interactive BQ25504 diagram with real-time resistor values
 - **Modern and responsive interface** - Adapts to mobile, tablets and desktop
 - **Precise calculations** - Exact formulas from BQ25504 datasheet
 - **Range validation** - Prevents out-of-specification values
@@ -33,7 +34,7 @@ Click any link above to open the calculator directly in your browser. No install
 4. **Configure VBAT_UV** - Minimum battery voltage (2.2V - 5.25V)
 5. **Configure Battery OK** - Battery OK thresholds and hysteresis (2.2V - 5.25V)
 6. **Configure MPPT** - Maximum power point percentage (50% - 100%)
-7. **See the resistor values** calculated automatically
+7. **See the resistor values** calculated automatically in both the results table and the interactive SVG schematic
 
 ### Battery Presets
 
@@ -43,6 +44,22 @@ The calculator includes preset configurations for common battery types:
 - **LiFePO Single Cell**: OV=3.5V, VBAT_OK_HYST=3.2V, VBAT_OK=3.0V, UV=2.5V
 - **NiMH 2x Cells**: OV=2.8V, VBAT_OK_HYST=2.4V, VBAT_OK=2.25V, UV=2.2V
 - **Custom**: Enter your own voltage values manually
+
+## Dynamic SVG Schematic
+
+The calculator features an interactive BQ25504 schematic diagram that updates in real-time:
+
+- **Live resistor values** - All calculated resistances appear directly on the schematic
+- **Scientific notation** - Values displayed with 2 decimal places and appropriate units (MΩ, kΩ, Ω)
+- **Real-time updates** - Values change instantly as you modify inputs or select battery presets
+- **Visual feedback** - Invalid or empty values show as "-" on the diagram
+- **Responsive design** - SVG scales perfectly on all screen sizes
+
+The schematic shows all 9 calculated resistances:
+- **ROV1/ROV2** - Battery overvoltage protection
+- **RUV1/RUV2** - Battery undervoltage protection  
+- **ROK1/ROK2/ROK3** - Battery OK threshold detection
+- **ROC1/ROC2** - MPPT sampling network
 
 ## Keyboard Shortcuts
 
@@ -62,6 +79,7 @@ The calculator adapts perfectly to:
 - **HTML5** - Semantic structure
 - **CSS3** - Modern styles with Flexbox and Grid
 - **JavaScript ES6+** - Precise BQ25504 calculations
+- **SVG** - Interactive schematic diagram with dynamic value injection
 - **Datasheet Formulas** - Exact Texas Instruments implementation
 - **Real-time validation** - Dynamic ranges and constraints
 
@@ -71,7 +89,8 @@ The calculator adapts perfectly to:
 bq25504-calculator/
 ├── index.html                              # BQ25504 Calculator
 ├── styles.css                              # Responsive styles
-├── script.js                               # BQ25504 formulas
+├── script.js                               # BQ25504 formulas + SVG injection
+├── bq25504.svg                             # Interactive schematic diagram
 ├── equations.txt                           # Source of truth equations
 ├── bq25504-calculator-specification.json   # AI specification file
 └── README.md                               # Documentation
