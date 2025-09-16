@@ -12,21 +12,21 @@ A professional web calculator for configuring BQ25504 chip resistors, built with
 - **Real-time calculation** - Instant results when changing values
 - **No dependencies** - Pure HTML, CSS and JavaScript only
 
-## See it in Action
+## Try it Online
 
-### Direct Links (Click to open)
+### Live Demo Links
 
-[![Open with HTML Preview](https://img.shields.io/badge/HTML%20Preview-Open%20Calculator-blue?style=for-the-badge&logo=html5)](https://htmlpreview.github.io/?https://raw.githubusercontent.com/galopago/bq25504-calculator/main/index.html)
+**HTML Preview**  
+https://htmlpreview.github.io/?https://raw.githubusercontent.com/galopago/bq25504-calculator/main/index.html
 
-[![Open with Raw.githack](https://img.shields.io/badge/Raw.githack-Open%20Calculator-green?style=for-the-badge&logo=github)](https://raw.githack.com/galopago/bq25504-calculator/main/index.html)
+**Raw.githack**  
+https://raw.githack.com/galopago/bq25504-calculator/main/index.html
 
-[![Open with Statically](https://img.shields.io/badge/Statically-Open%20Calculator-orange?style=for-the-badge&logo=cdn)](https://cdn.statically.io/gh/galopago/bq25504-calculator/main/index.html)
+**Statically CDN**  
+https://cdn.statically.io/gh/galopago/bq25504-calculator/main/index.html
 
-### Alternative Links
-
-- **HTML Preview**: https://htmlpreview.github.io/?https://raw.githubusercontent.com/galopago/bq25504-calculator/main/index.html
-- **Raw.githack**: https://raw.githack.com/galopago/bq25504-calculator/main/index.html
-- **Statically CDN**: https://cdn.statically.io/gh/galopago/bq25504-calculator/main/index.html
+### Quick Access
+Click any link above to open the calculator directly in your browser. No installation required!
 
 ## How to Use
 
