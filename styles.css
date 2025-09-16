@@ -84,6 +84,100 @@ main {
     padding: 40px;
 }
 
+/* Battery Selection Section */
+.battery-selection-section {
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.battery-selection-section:hover {
+    border-color: #667eea;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+}
+
+.battery-selection-section h2 {
+    color: #4a5568;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.battery-selector {
+    margin-bottom: 20px;
+}
+
+.battery-selector label {
+    display: block;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.battery-selector select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+    cursor: pointer;
+}
+
+.battery-selector select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.battery-info {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.battery-info p {
+    color: #4a5568;
+    font-size: 0.85rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.battery-info .voltage-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.battery-info .voltage-item {
+    background: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.battery-info .voltage-item .voltage-label {
+    font-weight: 600;
+    color: #4a5568;
+    font-size: 0.7rem;
+    margin-bottom: 2px;
+}
+
+.battery-info .voltage-item .voltage-value {
+    color: #38b2ac;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
 .calculator-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -254,6 +348,36 @@ footer p {
         font-size: 1.2rem;
     }
     
+    .battery-selection-section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .battery-selection-section h2 {
+        font-size: 1.1rem;
+    }
+    
+    .battery-info .voltage-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .battery-info .voltage-item {
+        padding: 6px 8px;
+    }
+    
+    .battery-info .voltage-item .voltage-label {
+        font-size: 0.65rem;
+    }
+    
+    .battery-info .voltage-item .voltage-value {
+        font-size: 0.75rem;
+    }
+    
+    .battery-info p {
+        font-size: 0.8rem;
+    }
+    
     .result-group {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
@@ -304,6 +428,36 @@ footer p {
     
     .calc-section {
         padding: 15px;
+    }
+    
+    .battery-selection-section {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .battery-selection-section h2 {
+        font-size: 1rem;
+    }
+    
+    .battery-info .voltage-list {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+    
+    .battery-info .voltage-item {
+        padding: 5px 6px;
+    }
+    
+    .battery-info .voltage-item .voltage-label {
+        font-size: 0.6rem;
+    }
+    
+    .battery-info .voltage-item .voltage-value {
+        font-size: 0.7rem;
+    }
+    
+    .battery-info p {
+        font-size: 0.75rem;
     }
     
     .result-group {

@@ -12,12 +12,103 @@ const CONSTANTS = {
     MPP_MAX: 100
 };
 
+// Battery presets
+const BATTERY_PRESETS = {
+    'custom': {
+        name: 'Custom',
+        description: 'Manual entry',
+        voltages: {}
+    },
+    'liion-single': {
+        name: 'Li-ion',
+        description: 'Single cell',
+        voltages: {
+            vbat_ov: 4.2,
+            vbat_uv: 3.0,
+            vbat_ok_prog: 3.3,
+            vbat_ok_hyst: 3.7
+        }
+    },
+    'lifepo-single': {
+        name: 'LiFePO',
+        description: 'Single cell',
+        voltages: {
+            vbat_ov: 3.5,
+            vbat_uv: 2.5,
+            vbat_ok_prog: 3.0,
+            vbat_ok_hyst: 3.2
+        }
+    },
+    'nimh-2cell': {
+        name: 'NiMH 2x',
+        description: '2-cell pack',
+        voltages: {
+            vbat_ov: 2.8,
+            vbat_uv: 1.8,
+            vbat_ok_prog: 2.0,
+            vbat_ok_hyst: 2.4
+        }
+    }
+};
+
 // Main function to calculate all resistances
 function calculateAllResistances() {
     calculateVBAT_OV();
     calculateVBAT_UV();
     calculateBatteryOK();
     calculateMPPT();
+}
+
+// Function to handle battery type selection
+function handleBatteryTypeChange() {
+    const batteryType = document.getElementById('battery-type').value;
+    const preset = BATTERY_PRESETS[batteryType];
+    const batteryInfo = document.getElementById('battery-info');
+    
+    // Update battery info display
+    if (batteryType === 'custom') {
+        batteryInfo.innerHTML = '<p>Enter voltages manually below.</p>';
+    } else {
+        const voltageList = Object.entries(preset.voltages)
+            .map(([key, value]) => {
+                const label = getVoltageLabel(key);
+                return `<div class="voltage-item">
+                    <div class="voltage-label">${label}</div>
+                    <div class="voltage-value">${value}V</div>
+                </div>`;
+            }).join('');
+        
+        batteryInfo.innerHTML = `
+            <p><strong>${preset.name}</strong> - ${preset.description}</p>
+            <div class="voltage-list">${voltageList}</div>
+        `;
+        
+        // Populate voltage inputs
+        populateVoltageInputs(preset.voltages);
+    }
+}
+
+// Function to get display label for voltage keys
+function getVoltageLabel(key) {
+    const labels = {
+        'vbat_ov': 'OV',
+        'vbat_uv': 'UV',
+        'vbat_ok_prog': 'VBAT_OK',
+        'vbat_ok_hyst': 'VBAT_OK_HYST'
+    };
+    return labels[key] || key;
+}
+
+// Function to populate voltage inputs
+function populateVoltageInputs(voltages) {
+    Object.entries(voltages).forEach(([key, value]) => {
+        const input = document.getElementById(key);
+        if (input) {
+            input.value = value;
+            // Trigger input event to recalculate
+            input.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+    });
 }
 
 // VBAT_OV (Overvoltage) calculation
@@ -202,6 +293,10 @@ function findNearestStandardResistance(resistance) {
 
 // Event listeners
 document.addEventListener('DOMContentLoaded', function() {
+    // Add event listener for battery type selection
+    const batteryTypeSelect = document.getElementById('battery-type');
+    batteryTypeSelect.addEventListener('change', handleBatteryTypeChange);
+    
     // Add event listeners to all inputs
     const inputs = document.querySelectorAll('input[type="number"]');
     inputs.forEach(input => {
@@ -211,6 +306,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Calculate initially
     calculateAllResistances();
+    
+    // Initialize battery info display
+    handleBatteryTypeChange();
     
     // Add real-time validation
     inputs.forEach(input => {

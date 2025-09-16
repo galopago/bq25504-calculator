@@ -22,6 +22,26 @@
         </section>
         
         <main>
+            <!-- Battery Type Selection -->
+            <div class="battery-selection-section">
+                <h2>Battery Presets</h2>
+                <p class="section-info">Select battery type to auto-fill voltages or use Custom.</p>
+                
+                <div class="battery-selector">
+                    <label for="battery-type">Type:</label>
+                    <select id="battery-type">
+                        <option value="custom">Custom</option>
+                        <option value="liion-single">Li-ion</option>
+                        <option value="lifepo-single">LiFePO</option>
+                        <option value="nimh-2cell">NiMH 2x</option>
+                    </select>
+                </div>
+                
+                <div class="battery-info" id="battery-info">
+                    <p>Select type for presets.</p>
+                </div>
+            </div>
+            
             <div class="calculator-grid">
                 <!-- VBAT_OV Section -->
                 <div class="calc-section">

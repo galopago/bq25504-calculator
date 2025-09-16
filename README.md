@@ -4,6 +4,7 @@ A professional web calculator for configuring BQ25504 chip resistors, built with
 
 ## Features
 
+- **Battery presets** - Quick setup for Li-ion, LiFePO, and NiMH batteries
 - **Modern and responsive interface** - Adapts to mobile, tablets and desktop
 - **Precise calculations** - Exact formulas from BQ25504 datasheet
 - **Range validation** - Prevents out-of-specification values
@@ -30,11 +31,21 @@ A professional web calculator for configuring BQ25504 chip resistors, built with
 ## How to Use
 
 1. **Open any of the links above**
-2. **Configure VBAT_OV** - Maximum battery voltage (2.5V - 5.25V)
-3. **Configure VBAT_UV** - Minimum battery voltage (2.5V - 5.25V)
-4. **Configure Battery OK** - Battery OK thresholds and hysteresis
-5. **Configure MPPT** - Maximum power point percentage (50% - 100%)
-6. **See the resistor values** calculated automatically
+2. **Select battery type** - Choose from presets (Li-ion, LiFePO, NiMH 2x) or Custom
+3. **Configure VBAT_OV** - Maximum battery voltage (2.5V - 5.25V)
+4. **Configure VBAT_UV** - Minimum battery voltage (2.5V - 5.25V)
+5. **Configure Battery OK** - Battery OK thresholds and hysteresis
+6. **Configure MPPT** - Maximum power point percentage (50% - 100%)
+7. **See the resistor values** calculated automatically
+
+### Battery Presets
+
+The calculator includes preset configurations for common battery types:
+
+- **Li-ion Single Cell**: OV=4.2V, VBAT_OK_HYST=3.7V, VBAT_OK=3.3V, UV=3.0V
+- **LiFePO Single Cell**: OV=3.5V, VBAT_OK_HYST=3.2V, VBAT_OK=3.0V, UV=2.5V
+- **NiMH 2x Cells**: OV=2.8V, VBAT_OK_HYST=2.4V, VBAT_OK=2.0V, UV=1.8V
+- **Custom**: Enter your own voltage values manually
 
 ## Keyboard Shortcuts
 
@@ -45,9 +56,9 @@ A professional web calculator for configuring BQ25504 chip resistors, built with
 ## Responsive Design
 
 The calculator adapts perfectly to:
-- **Mobile** (320px+) - Optimized vertical layout
-- **Tablets** (768px+) - 2-column grid
-- **Desktop** (1024px+) - 4-column grid
+- **Mobile** (320px+) - Optimized vertical layout with compact battery presets
+- **Tablets** (768px+) - 2-column grid with responsive battery info
+- **Desktop** (1024px+) - 4-column grid with full battery preset display
 
 ## Technologies Used
 
@@ -61,12 +72,33 @@ The calculator adapts perfectly to:
 
 ```
 bq25504-calculator/
-├── index.html          # BQ25504 Calculator
-├── styles.css          # Responsive styles
-├── script.js           # BQ25504 formulas
-├── equations.txt       # Source of truth equations
-└── README.md           # Documentation
+├── index.html                              # BQ25504 Calculator
+├── styles.css                              # Responsive styles
+├── script.js                               # BQ25504 formulas
+├── equations.txt                           # Source of truth equations
+├── bq25504-calculator-specification.json   # AI specification file
+└── README.md                               # Documentation
 ```
+
+## AI Specification File
+
+The project includes `bq25504-calculator-specification.json` - a comprehensive specification file designed for AI agents to recreate similar calculators without requiring access to source files.
+
+**Purpose:**
+- Complete technical blueprint for AI-driven development
+- Contains all formulas, UI specifications, and implementation guidelines
+- Enables other AI agents to build functionally equivalent calculators
+- Includes battery presets, responsive design requirements, and validation rules
+
+**Contents:**
+- BQ25504 chip parameters and resistor calculation formulas
+- Battery preset configurations (Li-ion, LiFePO, NiMH)
+- Complete UI structure and styling requirements
+- JavaScript functionality specifications
+- Responsive design breakpoints and mobile optimization
+- Testing requirements and deployment considerations
+
+This specification file serves as a complete reference for AI-assisted development of BQ25504 calculator applications.
 
 ## Calculated Parameters
 

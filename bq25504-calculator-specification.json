@@ -1,0 +1,324 @@
+{
+  "project_metadata": {
+    "name": "BQ25504 Calculator",
+    "description": "Web calculator for configuring BQ25504 chip resistors with battery presets",
+    "version": "2.0.0",
+    "created_by_ai": {
+      "model": "Claude Sonnet 4",
+      "training_date": "April 2024",
+      "capabilities": "Advanced reasoning, code generation, web development"
+    },
+    "creation_date": "2025-09-16",
+    "purpose": "This specification allows another AI agent to recreate a similar BQ25504 calculator without requiring source files"
+  },
+  
+  "project_overview": {
+    "type": "Web Application",
+    "technology_stack": ["HTML5", "CSS3", "Vanilla JavaScript ES6+"],
+    "target_audience": "Electronics engineers, embedded systems developers, power management designers",
+    "main_functionality": "Calculate resistor values for BQ25504 energy harvesting IC configuration",
+    "key_features": [
+      "Battery type presets (Li-ion, LiFePO, NiMH)",
+      "Real-time resistor calculations",
+      "Responsive mobile-first design",
+      "Input validation and range checking",
+      "Professional UI with animations"
+    ]
+  },
+
+  "technical_specifications": {
+    "bq25504_chip": {
+      "manufacturer": "Texas Instruments",
+      "purpose": "Ultra-low power boost converter with battery management",
+      "key_parameters": {
+        "vbat_ov_range": "2.5V - 5.25V",
+        "vbat_uv_range": "2.5V - 5.25V", 
+        "mpp_range": "50% - 100%",
+        "internal_vref": "1.25V"
+      }
+    },
+    
+    "resistor_networks": {
+      "vbat_ov": {
+        "total_resistance": "10 MΩ",
+        "formula": "VBAT_OV = VREF * (1 + ROV2/ROV1) * 3/2",
+        "calculation": "ROV1 = ROV_TOTAL * (3/2) * VREF / VBAT_OV, ROV2 = ROV_TOTAL - ROV1"
+      },
+      "vbat_uv": {
+        "total_resistance": "10 MΩ", 
+        "formula": "VBAT_UV = VREF * (1 + RUV2/RUV1)",
+        "calculation": "RUV1 = RUV_TOTAL * VREF / VBAT_UV, RUV2 = RUV_TOTAL - RUV1"
+      },
+      "battery_ok": {
+        "total_resistance": "10 MΩ",
+        "formula": "VBAT_OK = VREF * (1 + ROK2/ROK1), VBAT_OK_HYST = VREF * ((ROK1+ROK2+ROK3)/ROK1)",
+        "calculation": "ROK1 = RSUM * VREF / VBAT_OK_HYST, ROK2 = ROK1 * (VBAT_OK_PROG/VREF - 1), ROK3 = RSUM - ROK1 - ROK2"
+      },
+      "mppt": {
+        "total_resistance": "20 MΩ",
+        "formula": "MPP% = 100% * (ROC1 / (ROC1 + ROC2))",
+        "calculation": "ROC1 = ROC_TOTAL * (MPP_THRESHOLD / 100), ROC2 = ROC_TOTAL - ROC1"
+      }
+    }
+  },
+
+  "battery_presets": {
+    "liion_single": {
+      "name": "Li-ion",
+      "description": "Single cell",
+      "voltages": {
+        "vbat_ov": 4.2,
+        "vbat_uv": 3.0,
+        "vbat_ok_prog": 3.3,
+        "vbat_ok_hyst": 3.7
+      }
+    },
+    "lifepo_single": {
+      "name": "LiFePO", 
+      "description": "Single cell",
+      "voltages": {
+        "vbat_ov": 3.5,
+        "vbat_uv": 2.5,
+        "vbat_ok_prog": 3.0,
+        "vbat_ok_hyst": 3.2
+      }
+    },
+    "nimh_2cell": {
+      "name": "NiMH 2x",
+      "description": "2-cell pack", 
+      "voltages": {
+        "vbat_ov": 2.8,
+        "vbat_uv": 1.8,
+        "vbat_ok_prog": 2.0,
+        "vbat_ok_hyst": 2.4
+      }
+    },
+    "custom": {
+      "name": "Custom",
+      "description": "Manual entry",
+      "voltages": {}
+    }
+  },
+
+  "ui_structure": {
+    "layout": {
+      "header": {
+        "title": "BQ25504 Calculator",
+        "subtitle": "Resistor configuration for BQ25504 chip"
+      },
+      "schematic_section": {
+        "title": "BQ25504 Schematic",
+        "image": "bq25504.svg",
+        "description": "Visual reference of the chip configuration"
+      },
+      "battery_presets": {
+        "title": "Battery Presets",
+        "description": "Select battery type to auto-fill voltages or use Custom",
+        "selector": {
+          "label": "Type:",
+          "options": ["Custom", "Li-ion", "LiFePO", "NiMH 2x"]
+        },
+        "info_display": {
+          "custom_message": "Enter voltages manually below.",
+          "preset_display": "Shows battery name, description, and voltage values in grid"
+        }
+      },
+      "calculator_sections": [
+        {
+          "id": "vbat_ov",
+          "title": "Battery Maximum Voltage (VBAT_OV)",
+          "description": "ROV1 + ROV2 = 10 MΩ | Range: 2.5V - 5.25V",
+          "input": {
+            "id": "vbat_ov",
+            "type": "number",
+            "step": 0.1,
+            "min": 2.5,
+            "max": 5.25,
+            "placeholder": "3.7"
+          },
+          "outputs": ["rov1_result", "rov2_result"]
+        },
+        {
+          "id": "vbat_uv", 
+          "title": "Battery Minimum Voltage (VBAT_UV)",
+          "description": "RUV1 + RUV2 = 10 MΩ | Minimum: 2.5V",
+          "input": {
+            "id": "vbat_uv",
+            "type": "number", 
+            "step": 0.1,
+            "min": 2.5,
+            "max": 5.25,
+            "placeholder": "2.5"
+          },
+          "outputs": ["ruv1_result", "ruv2_result"]
+        },
+        {
+          "id": "battery_ok",
+          "title": "Battery OK Threshold", 
+          "description": "ROK1 + ROK2 + ROK3 = 10 MΩ",
+          "inputs": [
+            {
+              "id": "vbat_ok_prog",
+              "label": "VBAT_OK_PROG (V):",
+              "type": "number",
+              "step": 0.1,
+              "min": 2.5,
+              "max": 5.25,
+              "placeholder": "3.0"
+            },
+            {
+              "id": "vbat_ok_hyst", 
+              "label": "VBAT_OK_HYST (V):",
+              "type": "number",
+              "step": 0.1,
+              "min": 2.5,
+              "max": 5.25,
+              "placeholder": "3.2"
+            }
+          ],
+          "outputs": ["rok1_result", "rok2_result", "rok3_result"]
+        },
+        {
+          "id": "mppt",
+          "title": "MPPT Sampling Network",
+          "description": "ROC1 + ROC2 = 20 MΩ", 
+          "input": {
+            "id": "mpp_threshold",
+            "label": "MPP threshold (% of VIN_DC):",
+            "type": "number",
+            "step": 1,
+            "min": 50,
+            "max": 100,
+            "placeholder": "80"
+          },
+          "outputs": ["roc1_result", "roc2_result"]
+        }
+      ]
+    }
+  },
+
+  "styling_requirements": {
+    "design_philosophy": "Modern, mobile-first responsive design",
+    "color_scheme": {
+      "primary": "#667eea",
+      "secondary": "#38b2ac", 
+      "background": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      "text_primary": "#4a5568",
+      "text_secondary": "#718096",
+      "error": "#e53e3e",
+      "success": "#38b2ac"
+    },
+    "typography": {
+      "font_family": "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+      "heading_sizes": {
+        "h1": "2.5rem",
+        "h2": "1.4rem (desktop) -> 1.2rem (tablet) -> 1rem (mobile)"
+      }
+    },
+    "layout": {
+      "container": "max-width: 1200px, centered, white background, rounded corners",
+      "sections": "Grid layout, responsive breakpoints, hover effects",
+      "inputs": "Rounded corners, focus states, validation styling",
+      "results": "Grid display, color-coded values, hover effects"
+    },
+    "responsive_breakpoints": {
+      "mobile": "320px+",
+      "tablet": "768px+", 
+      "desktop": "1024px+"
+    },
+    "animations": {
+      "fade_in": "0.6s ease-out for sections",
+      "hover_effects": "Smooth transitions on interactive elements",
+      "focus_states": "Glow effects on form inputs"
+    }
+  },
+
+  "functionality_requirements": {
+    "core_functions": [
+      "calculateVBAT_OV() - Calculate overvoltage resistors",
+      "calculateVBAT_UV() - Calculate undervoltage resistors", 
+      "calculateBatteryOK() - Calculate battery OK threshold resistors",
+      "calculateMPPT() - Calculate MPPT sampling resistors",
+      "handleBatteryTypeChange() - Handle preset selection",
+      "populateVoltageInputs() - Auto-fill inputs from presets",
+      "displayResistance() - Format and display resistor values",
+      "isValidVoltage() - Validate input ranges",
+      "clearResults() - Clear invalid results"
+    ],
+    "validation_rules": {
+      "vbat_ov": "2.5V <= value <= 5.25V",
+      "vbat_uv": "2.5V <= value <= 5.25V",
+      "vbat_ok_prog": "2.5V <= value <= 5.25V",
+      "vbat_ok_hyst": "vbat_ok_prog + 0.1V <= value <= 5.25V",
+      "mpp_threshold": "50 <= value <= 100"
+    },
+    "real_time_features": [
+      "Input change triggers immediate recalculation",
+      "Visual feedback for invalid inputs",
+      "Automatic preset population on selection",
+      "Responsive result formatting (MΩ, kΩ, Ω)"
+    ]
+  },
+
+  "implementation_guidelines": {
+    "html_structure": {
+      "semantic_elements": "Use header, main, section, article tags",
+      "accessibility": "Proper labels, ARIA attributes, keyboard navigation",
+      "form_validation": "HTML5 validation attributes (min, max, step)"
+    },
+    "css_approach": {
+      "methodology": "Mobile-first responsive design",
+      "layout": "CSS Grid and Flexbox for modern layouts",
+      "organization": "Logical grouping of styles, clear naming conventions"
+    },
+    "javascript_architecture": {
+      "pattern": "Modular functions, event-driven programming",
+      "constants": "Centralized configuration object",
+      "validation": "Comprehensive input validation",
+      "error_handling": "Graceful degradation for invalid inputs"
+    },
+    "performance_considerations": [
+      "Minimal dependencies (vanilla JS only)",
+      "Efficient DOM manipulation",
+      "Optimized calculations",
+      "Responsive images and assets"
+    ]
+  },
+
+  "testing_requirements": {
+    "functionality_tests": [
+      "All calculation formulas produce correct results",
+      "Input validation works for all ranges",
+      "Battery presets populate correctly",
+      "Responsive design works on all screen sizes",
+      "Real-time updates function properly"
+    ],
+    "edge_cases": [
+      "Boundary values (min/max inputs)",
+      "Invalid input handling",
+      "Empty field behavior",
+      "Rapid input changes"
+    ]
+  },
+
+  "deployment_considerations": {
+    "hosting": "Static files, no server required",
+    "browser_support": "Modern browsers with ES6+ support",
+    "dependencies": "None (vanilla HTML/CSS/JS)",
+    "file_structure": [
+      "index.html - Main application",
+      "styles.css - All styling",
+      "script.js - All functionality", 
+      "bq25504.svg - Schematic diagram",
+      "README.md - Documentation"
+    ]
+  },
+
+  "additional_notes": {
+    "datasheet_reference": "Based on Texas Instruments BQ25504 datasheet formulas",
+    "precision": "Calculations use exact datasheet equations for accuracy",
+    "usability": "Designed for engineers who need quick, accurate resistor calculations",
+    "extensibility": "Easy to add new battery types or modify calculations",
+    "maintenance": "Clean, well-documented code for easy updates"
+  }
+}
