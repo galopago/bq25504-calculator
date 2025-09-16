@@ -22,9 +22,6 @@ https://htmlpreview.github.io/?https://raw.githubusercontent.com/galopago/bq2550
 **Raw.githack**  
 https://raw.githack.com/galopago/bq25504-calculator/main/index.html
 
-**Statically CDN**  
-https://cdn.statically.io/gh/galopago/bq25504-calculator/main/index.html
-
 ### Quick Access
 Click any link above to open the calculator directly in your browser. No installation required!
 
