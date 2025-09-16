@@ -170,7 +170,7 @@ function calculateBatteryOK() {
     const vbat_ok_prog = parseFloat(document.getElementById('vbat_ok_prog').value);
     const vbat_ok_hyst = parseFloat(document.getElementById('vbat_ok_hyst').value);
     
-    if (!isValidVoltage(vbat_ok_prog, CONSTANTS.VBAT_OV_MIN, CONSTANTS.VBAT_OV_MAX) ||
+    if (!isValidVoltage(vbat_ok_prog, CONSTANTS.VBAT_UV_MIN, CONSTANTS.VBAT_OV_MAX) ||
         !isValidVoltage(vbat_ok_hyst, vbat_ok_prog + 0.1, CONSTANTS.VBAT_OV_MAX)) {
         clearResults(['rok1_result', 'rok2_result', 'rok3_result']);
         return;

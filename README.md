@@ -31,7 +31,7 @@ Click any link above to open the calculator directly in your browser. No install
 2. **Select battery type** - Choose from presets (Li-ion, LiFePO, NiMH 2x) or Custom
 3. **Configure VBAT_OV** - Maximum battery voltage (2.5V - 5.25V)
 4. **Configure VBAT_UV** - Minimum battery voltage (2.2V - 5.25V)
-5. **Configure Battery OK** - Battery OK thresholds and hysteresis
+5. **Configure Battery OK** - Battery OK thresholds and hysteresis (2.2V - 5.25V)
 6. **Configure MPPT** - Maximum power point percentage (50% - 100%)
 7. **See the resistor values** calculated automatically
 

@@ -162,7 +162,7 @@
               "label": "VBAT_OK_PROG (V):",
               "type": "number",
               "step": 0.1,
-              "min": 2.5,
+              "min": 2.2,
               "max": 5.25,
               "placeholder": "3.0"
             },
@@ -171,7 +171,7 @@
               "label": "VBAT_OK_HYST (V):",
               "type": "number",
               "step": 0.1,
-              "min": 2.5,
+              "min": 2.2,
               "max": 5.25,
               "placeholder": "3.2"
             }
@@ -248,7 +248,7 @@
     "validation_rules": {
       "vbat_ov": "2.5V <= value <= 5.25V",
       "vbat_uv": "2.2V <= value <= 5.25V",
-      "vbat_ok_prog": "2.5V <= value <= 5.25V",
+      "vbat_ok_prog": "2.2V <= value <= 5.25V",
       "vbat_ok_hyst": "vbat_ok_prog + 0.1V <= value <= 5.25V",
       "mpp_threshold": "50 <= value <= 100"
     },
