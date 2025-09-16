@@ -2,7 +2,7 @@
   "project_metadata": {
     "name": "BQ25504 Calculator",
     "description": "Web calculator for configuring BQ25504 chip resistors with battery presets",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "created_by_ai": {
       "model": "Claude Sonnet 4",
       "training_date": "April 2024",
@@ -22,7 +22,9 @@
       "Real-time resistor calculations",
       "Responsive mobile-first design",
       "Input validation and range checking",
-      "Modern UI with animations"
+      "Modern UI with animations",
+      "Improved placeholder styling for better UX",
+      "Updated SVG schematic diagram"
     ]
   },
 
@@ -218,7 +220,7 @@
     "layout": {
       "container": "max-width: 1200px, centered, white background, rounded corners",
       "sections": "Grid layout, responsive breakpoints, hover effects",
-      "inputs": "Rounded corners, focus states, validation styling",
+      "inputs": "Rounded corners, focus states, validation styling, subtle placeholder text",
       "results": "Grid display, color-coded values, hover effects"
     },
     "responsive_breakpoints": {
@@ -230,6 +232,12 @@
       "fade_in": "0.6s ease-out for sections",
       "hover_effects": "Smooth transitions on interactive elements",
       "focus_states": "Glow effects on form inputs"
+    },
+    "placeholder_styling": {
+      "color": "#a0aec0",
+      "opacity": "0.7",
+      "purpose": "Subtle placeholder text that doesn't confuse with user input",
+      "browser_compatibility": "Supports all modern browsers with vendor prefixes"
     }
   },
 
@@ -307,9 +315,10 @@
     "dependencies": "None (vanilla HTML/CSS/JS)",
     "file_structure": [
       "index.html - Main application",
-      "styles.css - All styling",
+      "styles.css - All styling including placeholder improvements",
       "script.js - All functionality", 
-      "bq25504.svg - Schematic diagram",
+      "bq25504.svg - Updated schematic diagram",
+      "bq25504-calculator-specification.json - AI specification file",
       "README.md - Documentation"
     ]
   },
@@ -319,6 +328,11 @@
     "precision": "Calculations use exact datasheet equations for accuracy",
     "usability": "Designed for engineers who need quick, accurate resistor calculations",
     "extensibility": "Easy to add new battery types or modify calculations",
-    "maintenance": "Clean, well-documented code for easy updates"
+    "maintenance": "Clean, well-documented code for easy updates",
+    "recent_updates": {
+      "version_2.1.0": "Improved placeholder styling for better user experience and updated SVG schematic",
+      "placeholder_improvements": "Placeholder text now uses subtle color (#a0aec0) with 70% opacity to reduce confusion with user input",
+      "svg_update": "Updated schematic diagram with improved visual clarity"
+    }
   }
 }
